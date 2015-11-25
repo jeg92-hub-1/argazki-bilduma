@@ -32,7 +32,7 @@
  <div class="login-card">
 		<h1>LOG-IN</h1>
 		<br>
-		<form>
+		<form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST"  >
 			<input type="text" name="user" placeholder="NICK/EMAIL">
 			<input type="password" name="pass" placeholder="PASAHITZA">
 			<input type="submit" name="login" class="login login-submit" value="LOGIN">
@@ -40,6 +40,9 @@
 		<div class="login-help">
 			<a href="register.php">Erregistratu</a> | <a href="forgotPassword.php">Pasahitza ahaztu duzu</a>
 		</div>
+		<?php
+			include 'php/login_prozezatu.php';
+		?>
 	</div>
 </center>
 
