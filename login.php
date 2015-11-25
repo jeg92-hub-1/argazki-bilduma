@@ -5,9 +5,10 @@
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/login-register.css">
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+	<?php include 'php/sesioa.php';?>
 	
 </head>
 <body>
@@ -20,18 +21,27 @@
 		<div id="menu_icon"></div>
 		<nav>
 			<ul>
-				<li><a href="index.php" >HASIERA</a></li>
-				<li><a href="login.php" class="selected">LOGIN</a></li>
-				<li><a href="register.php">ERREGISTRATU</a></li>
-				<li><a href="#">INFORMAZIOA</a></li>
-				<li><a href="contact.html">KONTAKTATU</a></li>
+			<?php mainMenua(); ?>
 			</ul>
 		</nav><!-- end navigation menu -->
 
 	</header><!-- end header -->
 
 	<section class="main clearfix">
-
+<center>
+ <div class="login-card">
+		<h1>LOG-IN</h1>
+		<br>
+		<form>
+			<input type="text" name="user" placeholder="NICK/EMAIL">
+			<input type="password" name="pass" placeholder="PASAHITZA">
+			<input type="submit" name="login" class="login login-submit" value="LOGIN">
+		</form>
+		<div class="login-help">
+			<a href="register.php">Erregistratu</a> | <a href="forgotPassword.php">Pasahitza ahaztu duzu</a>
+		</div>
+	</div>
+</center>
 
 	</section><!-- end main -->
 </div>

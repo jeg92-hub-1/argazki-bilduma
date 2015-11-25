@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+	<?php include 'php/sesioa.php';?>
 	
 </head>
 <body>
@@ -20,11 +21,7 @@
 		<div id="menu_icon"></div>
 		<nav>
 			<ul>
-				<li><a href="index.php" >HASIERA</a></li>
-				<li><a href="login.php">LOGIN</a></li>
-				<li><a href="register.php" class="selected">ERREGISTRATU</a></li>
-				<li><a href="#">INFORMAZIOA</a></li>
-				<li><a href="contact.html">KONTAKTATU</a></li>
+				<?php mainMenua()?>
 			</ul>
 		</nav><!-- end navigation menu -->
 

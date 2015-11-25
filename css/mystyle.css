@@ -1,5 +1,5 @@
 /** the form elements **/
-#hongkiat-form { height:100%; text-align:center; padding-left:3%; padding-right:3%; margin-top:0;}
+#hongkiat-form { height:100%; text-align:center; padding-left:3%; margin-top:0;}
 .main h2 {
 	border-bottom: 1px solid #ddd; 
 color: #363636;
@@ -8,6 +8,8 @@ font-size: 2em;
 line-height: 1.5em; 
 text-align: center; 
 }
+
+/** Erregistroarentzat **/
 
 #hongkiat-form .txtinput { 
 display: block;
@@ -60,16 +62,14 @@ font-family: "Droid Serif", Georgia, serif;
 font-size:0.6em; 
 }
 
-
-/** custom buttons **/
-
 #aside p,#aligned p{font-size: 2em;}
+
 #buttons { display: block;width:100%; margin-top:0;
 float:left; }
+
 #submitbtn , #resetbtn{
+	background-color:  #A5A5A5;
 	margin-top:2%;
-}
-#buttons #submitbtn {
 	width:96.5%;
 	float:left;
 height: 2em;
@@ -82,62 +82,120 @@ cursor: pointer;
 -moz-border-radius: 2px;
 -webkit-border-radius: 2px;
 border-radius: 2px;
--moz-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
--ms-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
--webkit-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
-background-color: #515151;
-
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2eeaf', endColorstr='#90b026',GradientType=0 );
 }
-#buttons #submitbtn:hover, #buttons #submitbtn:active {
-border-color: #7c9826 #7c9826 #000;
+#buttons #submitbtn:hover,#buttons #resetbtn:hover, #buttons #submitbtn:active,#buttons #resetbtn:active {
+border-color: #808080;
 color: #fff;
--moz-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
--ms-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
--webkit-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
-background: rgb(228,237,189);
-background: -moz-linear-gradient(top, rgb(228,237,189) 2%, rgb(207,219,120) 3%, rgb(149,175,54) 100%); 
-background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgb(228,237,189)), color-stop(3%,rgb(207,219,120)), color-stop(100%,rgb(149,175,54))); 
-background: -webkit-linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); 
-background: -o-linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); background: -ms-linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); background: linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4edbd', endColorstr='#95af36',GradientType=0 );
+background: #808080;
+background: -moz-linear-gradient(top, #808080 2%, #808085 3%, #808080 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgb(228,237,189)), color-stop(3%,#808080), color-stop(100%,#808080)); 
+background: -webkit-linear-gradient(top, #808080 2%, #808085 3%, #808080 100%); 
+background: -o-linear-gradient(top, #808080 2%, #808085 3%, #808080 100%);
+background: -ms-linear-gradient(top, #808080 2%, #808085 3%, #808080 100%);
+background: linear-gradient(top, #808080 2%, #808085 3%, #808080 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4edbd', endColorstr='#808080',GradientType=0 );
 }
 
 
-#buttons #resetbtn {	width:96.5%;
-	float:left;
-height: 2em;
-border: 1px solid;
-font-weight: bold;
-font-size: 1.3em;
-color:  #fff;
-text-shadow: 0px 1px 0px #222;
-cursor: pointer;
--moz-border-radius: 2px;
--webkit-border-radius: 2px;
-border-radius: 2px;
--moz-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
--ms-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
--webkit-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
-box-shadow: inset 0 1px 0 rgba(256,256,256, .35);
-background-color: #515151;
+/** login **/
 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2eeaf', endColorstr='#90b026',GradientType=0 );
+.login-card {
+  padding: 40px;
+  width:60%;
+  background-color: #F7F7F7;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 
-#buttons #resetbtn:hover, #buttons #resetbtn:active  {
-border-color: #7c9826 #7c9826 #000;
-color: #fff;
--moz-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
--ms-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
--webkit-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
-box-shadow: inset 0 1px 0 rgba(256,256,256,0.4),0 1px 3px rgba(0,0,0,0.5);
-background: rgb(228,237,189);
-background: -moz-linear-gradient(top, rgb(228,237,189) 2%, rgb(207,219,120) 3%, rgb(149,175,54) 100%); 
-background: -webkit-gradient(linear, left top, left bottom, color-stop(2%,rgb(228,237,189)), color-stop(3%,rgb(207,219,120)), color-stop(100%,rgb(149,175,54))); 
-background: -webkit-linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); 
-background: -o-linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); background: -ms-linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); background: linear-gradient(top, rgb(228,237,189) 2%,rgb(207,219,120) 3%,rgb(149,175,54) 100%); 
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4edbd', endColorstr='#95af36',GradientType=0 );
+
+.login-card h1 {
+  font-weight: 100;
+  text-align: center;
+  font-size: 2.3em;
 }
+
+.login-card input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.login-card input[type=text], .login-card input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-top:10px;
+  margin-bottom: 20px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.login-card input[type=text]:hover, .login-card input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.login {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.login-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+margin-top:10px;  
+  background-color: #808080;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.login-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #696969;
+  cursor: true;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.login-card a {
+  text-decoration: none;
+  color: #666;
+  font-size:1.8em;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+}
+
+.login-card a:hover {
+  opacity: 1;
+}
+
+.login-help {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+}
+
