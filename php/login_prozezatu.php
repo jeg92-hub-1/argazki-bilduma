@@ -15,12 +15,13 @@ if(!preg_match($regex,$nick_email)){
 }else{
 	$nick_email = stripslashes($nick_email);
 	$nick_email = mysqli_real_escape_string($dblink,$nick_email);
-	$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE POSTA='$nick_email' AND PASAHITZA='$password'" ;
+	echo $nick_email;
+	$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE EMAIL='$nick_email' AND PASAHITZA='$password'" ;
 }
 
 $result = $dblink->query($erabiltzaileak);
 
-	if($result->num_rows == 1){
+	if($result!=null){
 		$data= date('Y/m/d G:i:s');
 		$_SESSION['konexio_data']=$data;
 		$konexioa="INSERT INTO konexioa (ID,POSTA,ORDUA) VALUES('','{$email}','{$data}')";
