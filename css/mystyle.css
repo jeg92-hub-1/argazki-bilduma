@@ -1,11 +1,9 @@
 /** the form elements **/
 #hongkiat-form { height:100%; text-align:center; padding-left:3%; margin-top:0;}
 .main h2 {
-	border-bottom: 1px solid #ddd; 
 color: #363636;
 font-family: "Droid Serif", Georgia, serif; 
-font-size: 2em; 
-line-height: 1.5em; 
+
 text-align: center; 
 }
 
@@ -67,9 +65,9 @@ font-size:0.6em;
 #buttons { display: block;width:100%; margin-top:0;
 float:left; }
 
-#submitbtn , #resetbtn{
+#submitbtn {
 	background-color:  #A5A5A5;
-	margin-top:2%;
+	margin-top:1%;
 	width:96.5%;
 	float:left;
 height: 2em;
@@ -84,7 +82,7 @@ cursor: pointer;
 border-radius: 2px;
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2eeaf', endColorstr='#90b026',GradientType=0 );
 }
-#buttons #submitbtn:hover,#buttons #resetbtn:hover, #buttons #submitbtn:active,#buttons #resetbtn:active {
+#buttons #submitbtn:hover, #buttons #submitbtn:active, {
 border-color: #808080;
 color: #fff;
 background: #808080;

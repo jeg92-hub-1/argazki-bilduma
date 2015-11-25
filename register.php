@@ -28,10 +28,10 @@
 	</header><!-- end header -->
 
 	<section class="main">
-	<h2>Zure datuak sartu</h2>
+	<h2>ZURE DATUAK SARTU</h2>
 	<form name="erregistro" id="hongkiat-form"  method="POST" >
 		<section id="aligned">
-			<p>NICK:</p><input type="text" name="IZENA" id="name" placeholder="Adb:Jon" autocomplete="off" tabindex="1" class="txtinput" required>
+			<p>NICK:</p><input type="text" name="NICK" id="name" placeholder="Adb:Jon" autocomplete="off" tabindex="1" class="txtinput" required>
 			<p>IZENA:</p> <input type="text" name="IZENA" id="name" placeholder="Adb:Jon" autocomplete="off" tabindex="2" class="txtinput" required>
 			<p>ABIZENAK:</p><input type="text" name="ABIZENAK" id="name" placeholder="Adb:Egana Granado" autocomplete="off" tabindex="3" class="txtinput" required pattern="([a-zA-z]*\s[a-zA-z]*)*">
 		
@@ -41,10 +41,10 @@
 					<p>PASAHITZA:</p><input type="password" name="PASAHITZA" id="password" placeholder="Adb:123456" autocomplete="off" tabindex="5" class="txtinput" >
 					<p>PASAHITZA:</p><input type="password" name="PASAHITZA2" id="password2" placeholder="Adb:123456" autocomplete="off" tabindex="6" class="txtinput" onchange="pasahitzaBalidatu(password.value,password2.value)">
 		</section>
+				<div id="mezua">dfsadfasfsdfasfsdfasfdfaf dfdsfas</div>
 		<div id="buttons">
-		<input type="button" id="submitbtn"name="submit" value="SUBMIT"/>
-		
-		<input type="button" id="resetbtn" name="submit" value="RESET"/>
+
+		<input type="submit" id="submitbtn"name="submit" value="SUBMIT"/>
 		</div>
 	</form>
 
