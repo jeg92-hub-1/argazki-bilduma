@@ -1,0 +1,67 @@
+/** the form elements **/
+#hongkiat-form { height:50%; text-align:center; padding:3% 0 0 3%;}
+.main h2 {
+	border-bottom: 1px solid #ddd; 
+color: #363636;
+font-family: "Droid Serif", Georgia, serif; 
+font-size: 2em; 
+line-height: 1.5em; 
+text-align: center; 
+}
+
+#hongkiat-form .txtinput { 
+display: block;
+font-family: "Helvetica Neue", Arial, sans-serif;
+border-style: solid;
+border-width: 1px;
+border-color: #dedede;
+margin-top:5px;
+margin-bottom: 30px;
+font-size: 1.5em;
+padding: 5px 5px;
+width:90%;
+color: #777;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset; 
+transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-webkit-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-moz-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+-o-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+text-align: center; 
+}
+
+#hongkiat-form .txtinput:focus { 
+color: #333;
+border-color: rgba(41, 92, 161, 0.4);
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+outline: 0 none; 
+}
+
+
+#hongkiat-form #aligned { 
+box-sizing: border-box; 
+float: left; 
+width: 50%;
+font-size:0.6em; 
+
+font-family: "Droid Serif", Georgia, serif; 
+}
+
+
+#hongkiat-form #aside {
+	float: left;
+	width: 50%;
+	padding: 0;
+	box-sizing: border-box;
+	
+font-family: "Droid Serif", Georgia, serif; 
+font-size:0.6em; 
+}
+
+
+/** custom buttons **/
+
+#aside p,#aligned p{font-size: 2em;}
