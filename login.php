@@ -20,9 +20,9 @@
 		<div id="menu_icon"></div>
 		<nav>
 			<ul>
-				<li><a href="index.html" >HASIERA</a></li>
-				<li><a href="login.html" class="selected">LOGIN</a></li>
-				<li><a href="register.html">ERREGISTRATU</a></li>
+				<li><a href="index.php" >HASIERA</a></li>
+				<li><a href="login.php" class="selected">LOGIN</a></li>
+				<li><a href="register.php">ERREGISTRATU</a></li>
 				<li><a href="#">INFORMAZIOA</a></li>
 				<li><a href="contact.html">KONTAKTATU</a></li>
 			</ul>

@@ -19,9 +19,9 @@
 		<div id="menu_icon"></div>
 		<nav>
 			<ul>
-				<li><a href="index.html" class="selected">HASIERA</a></li>
-				<li><a href="login.html">LOGIN</a></li>
-				<li><a href="register.html">ERREGISTRATU</a></li>
+				<li><a href="index.php" class="selected">HASIERA</a></li>
+				<li><a href="login.php">LOGIN</a></li>
+				<li><a href="register.php">ERREGISTRATU</a></li>
 				<li><a href="#">INFORMAZIOA</a></li>
 				<li><a href="contact.html">KONTAKTATU</a></li>
 			</ul>

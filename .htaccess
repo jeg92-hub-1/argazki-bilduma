@@ -1,0 +1,8 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /argazkiBilduma/
+RewriteRule ^/$ index.php [L]
+RewriteRule ^login$ login.php [L]
+RewriteRule ^register$ register.php [L]
+
+
