@@ -13,7 +13,7 @@ $server->register('konprobatu',array('nick'=>'xsd:string'),array('erantzuna'=>'x
 
 // create the function 
 function konprobatu($nick) {
-
+	return "BAI";
 } 
 // create HTTP listener 
 $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';

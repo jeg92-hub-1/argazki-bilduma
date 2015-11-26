@@ -9,12 +9,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	$nick_email= $_POST['user'];
 	if(!preg_match($regex,$nick_email)){
-		$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE NICK='$nick_email' AND PASAHITZA='$password'" ;
+		$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE NICK='". $nick_email ."' AND PASAHITZA='" . $password  . "';";
 	}else{
 		echo $nick_email;
-		$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE EMAIL='$nick_email' AND PASAHITZA='$password'" ;
+		echo $password;
+		$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE EMAIL='". $nick_email ."' AND PASAHITZA='" . $password  . "';";
 	}
 
+	$result = $dblink->query($erabiltzaileak);
+	$row = $result->fetch_array(MYSQLI_BOTH);
+
+	if($result){
+		$_SESSION['login_email']=$nick_email;
+		$_SESSION['login_rol']=$row['ROLA'];
+		
+		header('Location: ./');
+		
+	}
+
+
+require 'deskonexioa.php';
 }
 
 

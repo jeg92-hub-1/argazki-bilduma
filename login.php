@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+include "php/sesioa.php";
+
+?>
 <html lang="en">
 <head>
 	<title>ARGAZKI BILDUMA</title>
@@ -8,7 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-	<?php include 'php/sesioa.php';?>
+	
 	
 </head>
 <body>
@@ -33,8 +37,8 @@
 		<h1>LOG-IN</h1>
 		<br>
 		<form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST"  >
-			<input type="text" name="user" placeholder="NICK/EMAIL">
-			<input type="password" name="pass" placeholder="PASAHITZA">
+			<input type="text" name="user" placeholder="NICK/EMAIL" required>
+			<input type="password" name="pass" placeholder="PASAHITZA" required>
 			<input type="submit" name="login" class="login login-submit" value="LOGIN">
 		</form>
 		<div class="login-help">

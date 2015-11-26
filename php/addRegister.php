@@ -7,7 +7,7 @@ $abizenak = $_POST['ABIZENAK'];
 $pasahitza = $_POST['PASAHITZA'];
 $email = $_POST['EMAIL'];
 $sql="INSERT INTO ERABILTZAILEA(NICK,IZENA,ABIZENAK,PASAHITZA,EMAIL)
-		VALUES ('{$posta}','{$izena}','{$abizenak}','{$pasahitza}','{$telefonoa}','{$espezialitatea}','{$data}')";
+		VALUES ('{$nick}','{$izena}','{$abizenak}','{$pasahitza}','{$email}')";
 
 // SQL exekutatu 
 $result = $dblink->query($sql);

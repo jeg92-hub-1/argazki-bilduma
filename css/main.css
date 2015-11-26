@@ -112,9 +112,7 @@ h5, h6          { font-weight: bolder }
 	 background-color:#E6E6E6;
 }
 
-.main div{
-	margin-top:5%;
-}
+
 /*  Responsive code  */
 @media (max-width:1099px){
 

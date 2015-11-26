@@ -38,19 +38,19 @@
 		
 		</section>
 		<section id="aside">	
-				<p>EPOSTA:</p><input type="email" name="EMAIL" id="email" placeholder="Adb:myname001@gmail.com" autocomplete="off" tabindex="4" class="txtinput" pattern="^[a-z]*[0-9]{3}(\@irakasle|\@ikasle)\.ehu(\.es|\.eus)$" required >
+				<p>EPOSTA:</p><input type="email" name="EMAIL" id="email" placeholder="Adb:myname001@gmail.com" autocomplete="off" tabindex="4" class="txtinput" pattern="^[a-z]*[0-9]{3}(\@gmail|\@hotmail)(\.es|\.com)$" required >
 					<p>PASAHITZA:</p><input type="password" name="PASAHITZA" id="password" placeholder="Adb:123456" autocomplete="off" tabindex="5" class="txtinput" required >
 					<p>PASAHITZA:</p><input type="password" name="PASAHITZA2" id="password2" placeholder="Adb:123456" autocomplete="off" tabindex="6" class="txtinput" onchange="pasahitzaBalidatu(password.value,password2.value)">
 		</section>
-				<div id="mezua" >
+		<div id="mezua" >
 					
-					<?php
-					if ($_SERVER["REQUEST_METHOD"] == "POST"){
-						include "php/addRegister.php";
-					}
-					?>
+			<?php
+				if ($_SERVER["REQUEST_METHOD"] == "POST"){
+					include "php/addRegister.php";
+				}
+			?>
 					
-				</div>
+		</div>
 		<div id="buttons">
 
 		<input type="submit" id="submitbtn"name="submit" value="SUBMIT"/>
