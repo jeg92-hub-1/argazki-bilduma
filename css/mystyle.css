@@ -62,6 +62,9 @@ font-size:0.6em;
 
 #aside p,#aligned p{font-size: 2em;}
 
+#mezua { display: block;width:98%; margin-top:0; height:5%;
+float:left; }
+
 #buttons { display: block;width:100%; margin-top:0;
 float:left; }
 

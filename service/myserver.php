@@ -14,7 +14,21 @@ $server->register('nickKonprobatu',array('nick'=>'xsd:string'),array('erantzuna'
 
 // create the function 
 function nickKonprobatu($nick) { 
+	$irten=FALSE;
+	$file = fopen("./file/nick.txt","r");
+	while(!feof($file) && $irten==FALSE){
+		$lerroa=trim(fgets($file));
+		if(strcmp($lerroa,$pasahitza)==0){
+			$irten=TRUE;		
+		}
+	}
+	fclose($file);
 	
+	if ($irten==TRUE){
+		return "BAI";
+	}else{
+		return "EZ";
+	}
 	
 } 
 // create HTTP listener 
