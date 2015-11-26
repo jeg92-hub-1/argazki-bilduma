@@ -5,7 +5,6 @@ require_once('lib/class.wsdlcache.php');
 
 
 $ns="http://localhost/argazkiBilduma/service/myserver.php?wsdl";
-//$ns="http://azkenpraktika.hol.es/argazkiBilduma/sevice/myservice.php?wsdl";  //nameof the service
  
 $server = new soap_server; 
 $server->configureWSDL('konprobatu',$ns);
@@ -13,8 +12,8 @@ $server->wsdl->schemaTargetNamespace=$ns;
 $server->register('konprobatu',array('nick'=>'xsd:string'),array('erantzuna'=>'xsd:string'),$ns); 
 
 // create the function 
-function konprobatu($nick) { 
-	return "BAI";
+function konprobatu($nick) {
+
 } 
 // create HTTP listener 
 $HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';

@@ -4,7 +4,7 @@ RewriteBase /argazkiBilduma/
 RewriteRule ^/$ index.php [L]
 RewriteRule ^logout$ logout.php [L]
 RewriteRule ^setUser$ setUser.php [L]
-RewriteRule ^setAlbum$ setAlbum.php [L]
+RewriteRule ^manageAlbum$ manageAlbum.php [L]
 RewriteRule ^setProfile$ setProfile.php [L]
 RewriteRule ^login$ login.php [L]
 RewriteRule ^register$ register.php [L]

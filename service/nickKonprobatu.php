@@ -9,7 +9,6 @@ $nick = $_GET['NICK'];
 //$wsdl = "http://azkenpraktika.hol.es/argazkiBilduma/sevice/myservice.php";
 
 $wsdl = "http://localhost:8080/argazkiBilduma/service/myserver.php";
-
 //Erabiltzaile objektua sortzen
 $client = new nusoap_client($wsdl, 'wsdl');
 
@@ -24,6 +23,7 @@ if ($err) {
  
 $erantzuna = "<h1";
 $result1=$client->call('konprobatu', array('nick'=>$nick ));
+echo $result1 . "fassefa";
 
 if(strcmp($result1,"BAI")==0){
 		$erantzuna  = $erantzuna  . "color:red;'>EXISTITZENDA!!</h1>";
