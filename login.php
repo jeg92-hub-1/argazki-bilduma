@@ -33,7 +33,7 @@ include "php/sesioa.php";
 
 	<section class="main clearfix">
 <center>
- <div class="login-card">
+ <div class="content login-card">
 		<h1>LOG-IN</h1>
 		<br>
 		<form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST"  >

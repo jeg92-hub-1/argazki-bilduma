@@ -28,7 +28,7 @@
 	</header><!-- end header -->
 
 	<section class="main clearfix">
-	<div>
+	<div class="content">
 	<center>
 		<img src="img/image1.jpg">
 		</center>
