@@ -23,7 +23,6 @@ function mainMenua(){
 function manageAlbumMenua(){
 
 	if(isset($_SESSION['login_email'])){
-		
 		if($_SESSION['login_rol']=="ADMIN"){
 			echo "<li><a href='editAlbums'>ERABILTZAILEAK </a></li>";
 			echo "<li><a href='seeAllAlbum' >ALBUM GUZTIAK IKUSI</a></li>";

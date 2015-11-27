@@ -53,7 +53,7 @@
 		</div>
 		<div id="buttons">
 
-		<input type="submit" id="submitbtn"name="submit" value="SUBMIT"/>
+		<input type="submit" id="submitbtn" name="submit" value="SUBMIT"/>
 		</div>
 	</form>
 

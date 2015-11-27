@@ -18,13 +18,13 @@ if ($err) {
         //exit();
 }
  
-$erantzuna = "<h2 id='epostaerantzuna'style='font-size:1.6em; margin-top:30px;";
+$erantzuna = "<h1 style='";
 $result1=$client->call('comprobar', array('x'=>$pass,'y'=>$pass1));
 
 if(strcmp($result1,"INVALIDA")==0)
-	$erantzuna  = $erantzuna  . "color:red;'>Pasahitz errexegia</h2>";
+	$erantzuna  = $erantzuna  . "color:red;'>Pasahitz errexegia</h1>";
 else
-	$erantzuna  =  $erantzuna . "color:green;'>ONDO</h2>";
+	$erantzuna  =  $erantzuna . "color:green;'>ONDO</h1>";
 
 echo $erantzuna;
 ?>

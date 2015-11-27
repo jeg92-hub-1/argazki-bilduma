@@ -14,15 +14,15 @@ $result = $dblink->query($sql);
  
 // Baieztatu ea SQL ondo exekutatu den
 if($result) {
-	$file=fopen('./file/nick.txt','w') or die("Unable to open file!");
+	$file=fopen('./file/nick.txt','a') or die("Unable to open file!");
 	$txt = $nick . "\n";
 	fwrite($file, $txt);
 	fclose($file);
-	$file=fopen('./file/pasahitza.txt','w') or die("Unable to open file!");
+	$file=fopen('./file/pasahitza.txt','a') or die("Unable to open file!");
 	$txt = $pasahitza . "\n";
 	fwrite($file, $txt);
 	fclose($file);
-	echo "<h1 style='color:green'>Dena ondo joan da</h1>";
+	echo "<h1 id='msg' style='color:green'>Dena ondo joan da</h1>";
 }
 
 // DB deskonektatzeko
