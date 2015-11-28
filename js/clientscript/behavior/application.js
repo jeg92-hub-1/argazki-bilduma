@@ -17,7 +17,7 @@ AppBehavior.CarouselRules = {
                 //Given html element you can build a data object for the item if needed for later activation
                 var sKey = item.down('.key').innerHTML;
                 var sCaption = item.down('.caption').innerHTML;
-                var sEmail = item.down('.email').innerHTML;
+                var sEmail = item.down('.description').innerHTML;
                 return { name: sCaption, email: sEmail };
             },
             setItemEvents: function(carousel, itemElement, carouselItem, observer) {
@@ -89,9 +89,9 @@ AppBehavior.fireActiveCarouselItem = function(carousel, element, item) {
             break;
             
         case 'PictureCarousel':
-            $('ViewerCaption').update(item.value.name);
-            $('ViewerData').update(item.value.pictureHtml);
-            Element.show('Viewer');
+            $('ViewerCaption1').update(item.value.name);
+            $('ViewerData1').update(item.value.pictureHtml);
+            Element.show('Viewer1');
             break;
 
         case 'GroupCarousel':
@@ -110,7 +110,7 @@ AppBehavior.fireDeactiveCarouselItem = function(carousel, element, item) {
             break;
 
         case 'PictureCarousel': 
-            Element.hide('Viewer');
+            Element.hide('Viewer1');
             break;
 
         case 'GroupCarousel': 

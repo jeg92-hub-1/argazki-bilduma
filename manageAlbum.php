@@ -43,62 +43,7 @@
                 <div class="button navButton next" style="display:none;">Down</div>
                 <div class="container">
                     <div class="items">
-                        <div class="item selected">
-                            <div class="key caption">Adams, John</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">john.adams@somedomain.com</div>
-                        </div>            
-                        <div class="item">
-                            <div class="key caption">Brookes, Steve</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">steve.brookes@somedomain.com</div>
-                        </div>            
-                        <div class="item">
-                            <div class="key caption">Carter, Tracy</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">tracy.carter@somedomain.com</div>
-                        </div>            
-                        <div class="item">
-                            <div class="key caption">Dugar, Natalya</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">natalya.dugar@somedomain.com</div>
-                        </div>  
-<div class="item">
-                            <div class="key caption">Carter, Tracy</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">tracy.carter@somedomain.com</div>
-                        </div>            
-                        <div class="item">
-                            <div class="key caption">Dugar, Natalya</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">natalya.dugar@somedomain.com</div>
-                        </div>  
-<div class="item">
-                            <div class="key caption">Carter, Tracy</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">tracy.carter@somedomain.com</div>
-                        </div>            
-                        <div class="item">
-                            <div class="key caption">Dugar, Natalya</div>
-                            <div class="icon">
-                                <img alt="Profile" width="22" height="22" src="images/id.png" />
-                            </div>
-                            <div class="email">natalya.dugar@somedomain.com</div>
-                        </div>  						
+                        <?php include 'php/erab/nireAlbumerakutsi.php';?>					
                     </div>
                 </div>
             </div>
@@ -118,12 +63,12 @@
                             </div>
                         </div>            
                         <div class="item">
-                            <div class="key caption">Box</div>
+                            <div class="key caption">Boxcvzdvzv zsfgdfasdfasd</div>
                             <div class="icon">
                                 <img width=65 height=65 src="images/gallery/box.small.jpg" />
                             </div>
                             <div class="picture">
-                                <img width=500 height=400 src="images/gallery/box.big.jpg" />
+                                <img width="380px" height="320px" src="images/gallery/box.big.jpg" />
                             </div>
                         </div>            
                        
@@ -131,12 +76,18 @@
                 </div>
 				</div>
 		</div>
-		
-		<div id="Viewer" style="display:none;">
-            <h2>Viewer</h2>
-            <div id="ViewerCaption" class="caption"></div>
-            <div id="ViewerData" class="data"></div>
-        </div>
+		<div id="leftside">
+			<div id="Viewer" >
+				<h3>Album</h3>
+				<div id="ViewerCaption" class="caption"></div>
+				<div id="ViewerData" class="data"></div>
+			</div>
+			<div id="Viewer1" style="display:none;">
+				<h3>Argazkia</h3>
+				<div id="ViewerCaption1" class="caption"></div>
+				<div id="ViewerData1" class="data"></div>
+			</div>
+		</div>
     </div>
 	</section>
 </div>

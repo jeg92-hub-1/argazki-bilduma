@@ -6,8 +6,8 @@ define("PASSWORD", "");    // Pasahitza
 define("DATABASE", "argazkibilduma");    // Erabiliko den datu basearen izena
 /*
 define("HOST", "mysql.hostinger.es");     // Konektatut nahi den HOST-era
-define("USER", "u583754354_root");    // Erabiltzailearen izena (username)
-define("PASSWORD", "123456");    // Pasahitza
-define("DATABASE", "u583754354_quizz");    // Erabiliko den datu basearen izena
+define("USER", "u264511256_root");    // Erabiltzailearen izena (username)
+define("PASSWORD", "oqMuW0ElTz");    // Pasahitza
+define("DATABASE", "u264511256_wsab");    // Erabiliko den datu basearen izena
 */
 ?>

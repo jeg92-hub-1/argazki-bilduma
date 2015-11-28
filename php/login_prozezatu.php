@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$row = $result->fetch_array(MYSQLI_BOTH);
 
 	if($result){
-		$_SESSION['login_email']=$nick_email;
+		$_SESSION['login_email']=$row['EMAIL'];
+		$_SESSION['login_nick']=$row['NICK'];
 		$_SESSION['login_rol']=$row['ROLA'];
 		
 		header('Location: ./');

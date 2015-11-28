@@ -2,7 +2,9 @@
     #Workspace { width:100%; height:100%; }
 	#carousels{float:left; width:300px; height:50%;}
     /* Data Viewer */
-    #Viewer { float:left;  border:2px solid #555555; background-color:#ffffff; margin-left:1%; margin-top:2%; width:63%; height:89%; padding:1%;}
+	#leftside{float:left; margin-left:1%; margin-top:2.2%; width:63%; height:89%; }
+    #Viewer { width:100%; height:18%;border:2px solid #555555; background-color:#ffffff;padding:1%;}
+    #Viewer1 { border:2px solid #555555; background-color:#ffffff;  margin-top:2%; width:100%; height:78%; padding:1%;}
    
     /* Generic Carousel Properties */
     .carousel { position:relative; clear:both; left:20px; margin-top:8%; 
@@ -41,7 +43,7 @@
     #Carousel .navButton.next { right:0px; background-image:url('../images/interface/button.down.png'); }
     
     /* Hide data items from selector */
-    #Carousel .item .email {display:none;} 
+    #Carousel .item .description {display:none;} 
 
     /* Horizontal Carousel */
     #Carousel2 {float: left; height:88px; width:260px; }
