@@ -9,3 +9,5 @@ RewriteRule ^setProfile$ setProfile.php [L]
 RewriteRule ^login$ login.php [L]
 RewriteRule ^register$ register.php [L]
 RewriteRule ^publicAlbum$ publicAlbum.php [L]
+RewriteRule ^editAlbum$ editAlbum.php [L]
+

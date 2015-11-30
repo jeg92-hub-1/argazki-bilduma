@@ -3,12 +3,9 @@
 <html lang="en">
 <head>
 	<title>ARGAZKI BILDUMA</title>
-
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
 	<link rel="stylesheet" type="text/css" href="css/carousel.css">
-	
 	<script language="javascript" type="text/javascript" src="js/clientscript/prototype/prototype.js"></script>
     <script language="javascript" type="text/javascript" src="js/clientscript/prototype/scriptaculous.js?load=effects"></script>
     <script language="javascript" type="text/javascript" src="js/clientscript/os.js"></script>

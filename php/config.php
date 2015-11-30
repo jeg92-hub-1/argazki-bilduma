@@ -3,7 +3,7 @@
 define("HOST", "localhost");     // Konektatut nahi den HOST-era
 define("USER", "root");    // Erabiltzailearen izena (username)
 define("PASSWORD", "");    // Pasahitza
-define("DATABASE", "argazkibilduma");    // Erabiliko den datu basearen izena
+define("DATABASE", "argazkialbuma");    // Erabiliko den datu basearen izena
 /*
 define("HOST", "mysql.hostinger.es");     // Konektatut nahi den HOST-era
 define("USER", "u264511256_root");    // Erabiltzailearen izena (username)
