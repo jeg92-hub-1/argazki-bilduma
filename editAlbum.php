@@ -42,15 +42,69 @@
  
 		<div id="content1">
 			<div id="tab1">
-				<form>
-					<input type=""
+
+			<form>
+					<ul class="form-style-1">
+						<li>
+							<label>ALBUMAK: <span class="required">*</span></label>
+							<select name="combobox_album"  id="cb_album" class="field-select" onchange="showValue($('#cb_album option:selected').text());">
+								<?php include 'php/erab/cb_albumak.php';?>
+							</select>
+						</li>
+						<li>
+							<label>EGOERA: <span class="required">*</span></label>
+							<select name="combobox_egoera"  id="cb_album" class="field-select">
+								<option value="PUB" selected="selected">PUBLIKOA</option>
+								<option value="PRI" >PRIBATUA</option>
+								<option value="MUG" >MUGATUA</option>
+							</select>
+							
+						</li>
+						<li>
+							<label>ETIKETA: <span class="required">*</span></label>
+							<input type="text" name="field1" class="field-long" /></li>
+						<li>
+							<label>IRUDIA: <span class="required">*</span></label>
+							<input type="file" name="irudiaIgo" onchange="showMyImage(this)" class="field-long">
+						</li>
+						
+						<li>
+							<input type="button" value="GEHITU IRUDIA" />
+						</li>
+					</ul>
 				</form>
+				<img id="thumbnil" style="display:none" src="" alt="image"/>
+				
 			</div>
 			<div id="tab2">...</div>
 			<div id="tab3">...</div>
 			<div id="tab4">...</div>
 		</div>
 	</div>
+	<script>
+	 function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0; i < files.length; i++) {           
+            var file = files[i];
+            var imageType = /image.*/;     
+            if (!file.type.match(imageType)) {
+                continue;
+            }           
+            var img=document.getElementById("thumbnil");
+			img.style.display= 'block';
+            img.file = file;    
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { 
+                return function(e) { 
+                    aImg.src = e.target.result; 
+                }; 
+            })(img);
+            reader.readAsDataURL(file);
+        }    
+    }
+		function showValue(optiontext){
+		}
+	</script>
 </div>
 </body>
 </html>
