@@ -1,12 +1,12 @@
 <?php
 
-require_once 'php/config.php';
+include './php/config.php';
 $dblink = new mysqli(HOST, USER, PASSWORD, DATABASE);
 
 	if(!mysqli_connect_errno()) {
 		//echo 'Konektatut da';
 	}else{
 		die("MySQL konexioan errorea: ". mysqli_connect_error());
-		include 'deskonexioa.php';
+		include './php/deskonexioa.php';
 	}
 ?>

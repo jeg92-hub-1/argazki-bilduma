@@ -25,13 +25,16 @@ function mainMenua(){
 function manageAlbumMenua(){
 
 	if(isset($_SESSION['login_email'])){
+		echo "<li><a href='manageAlbum'>HASIERA </a></li>";
 		if($_SESSION['login_rol']=="ADMIN"){
-			echo "<li><a href='editAlbums'>ERABILTZAILEAK </a></li>";
+			echo "<li><a href='editAlbums'>ERABILTZAILEA EZABATU</a></li>";
 			echo "<li><a href='seeAllAlbum' >ALBUM GUZTIAK IKUSI</a></li>";
 			echo "<li><a href='editAlbums'>ALBUMAK EDITATU</a></li>";
 		}else{
-			echo "<li><a href='manageAlbum'>NIRE ALBUMAK IKUSI</a></li>";
-			echo "<li><a href='editAlbum'>ALBUMA EDITATU</a></li>";
+			echo "<li><a href='nireAlbumak'>NIRE ALBUMAK IKUSI</a></li>";
+			echo "<li><a href='editPhoto'>ARGAZKIAK EDITATU</a></li>";
+			echo "<li><a href='editAlbum'>ALBUMAK EDITATU</a></li>";
+			
 		}
 		
 		echo "<li><a href='publicAlbum'>ARGAZKI PUBLIKOAK IKUSI</a></li>";

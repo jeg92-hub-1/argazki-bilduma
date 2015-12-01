@@ -36,13 +36,12 @@
 		<ul id="tabs">
 			<li><a href="#" title="tab1">Argazkiak +</a></li>
 			<li><a href="#" title="tab2">Argazkiak -</a></li>
-			<li><a href="#" title="tab3">Albuma +</a></li>
-			<li><a href="#" title="tab4">Albuma -</a></li>
+			<li><a href="#" title="tab3">Argazki etiketa/egoera aldatu</a></li>
 		</ul>
  
 		<div id="content1">
 			<div id="tab1">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
 					<ul class="form-style-1">
 						<li>
 							<label>ALBUMAK: <span class="required">*</span></label>
@@ -61,23 +60,60 @@
 						</li>
 						<li>
 							<label>ETIKETA: <span class="required">*</span></label>
-							<input type="text" name="ETIKEA" id="etiketa" class="field-long" /></li>
+							<input type="text" name="ETIKETA" id="etiketa" class="field-long" /></li>
 						<li>
 							<label>IRUDIA: <span class="required">*</span></label>
-							<input type="file" name="irudiaIgo" onchange="showMyImage(this)" class="field-long" required>
+							<input type="file" name="irudiaIgo" onchange="showMyImage(this)" class="field-long" required/>
 						</li>
 						
 						<li>
 							<input type="submit" value="GEHITU IRUDIA" />
+							<?php
+							if ($_SERVER["REQUEST_METHOD"] == "POST"){
+								$nick = $_SESSION['login_nick'];
+								$etiketa = $_POST['ETIKETA'];
+								$albumIzenburua = $_POST['combobox_album'];
+								$egoera=$_POST['combobox_egoera'];
+								include 'php/erab/irudiaGehitu.php';
+							}
+							?>
 						</li>
 					</ul>
 				</form>
 				<img id="thumbnil" style="display:none" src="" alt="image"/>
 			</div>
 			
-			<div id="tab2">...</div>
+			<div id="tab2">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
+					<ul class="form-style-1">
+						<li>
+							<label>ALBUMAK: <span class="required">*</span></label>
+							<select name="combobox_album"  id="cb_album" class="field-select" onchange="erakutsiArgazkiak(cb_album.value);">
+								<?php include 'php/erab/cb_albumak.php';?>
+							</select>
+						</li>
+						<li>
+							<label>ARGAZKIAK: <span class="required">*</span></label>
+							<select name="combobox_argazkiak"  id="cb_argazkiak" class="field-select" onchange="erakutsiArgazkia(cb_album.value,cb_argazkiak.value)">
+							</select>
+						</li>
+						
+						<li>
+							<input type="submit" value="IRUDIA EZABATU" />
+							<?php
+							if ($_SERVER["REQUEST_METHOD"] == "POST"){
+								$nick = $_SESSION['login_nick'];
+								$etiketa = $_POST['ETIKETA'];
+								$albumIzenburua = $_POST['combobox_album'];
+								include 'php/erab/irudiaGehitu.php';
+							}
+							?>
+						</li>
+					</ul>
+				</form>
+				<img id="thumbnil" style="display:none" src="" alt="image"/>
+			</div>
 			<div id="tab3">...</div>
-			<div id="tab4">...</div>
 		</div>
 	</div>
 </div>

@@ -30,7 +30,7 @@
 	<section class="main clearfix">
 	<div class="content">
 	<center>
-		<img src="img/image1.jpg">
+		<img src="images/image1.jpg">
 		</center>
 	</section>
 	</div>
