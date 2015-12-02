@@ -33,7 +33,7 @@
 
 <div id="box">
 
-<?php include 'php/erakutsiArgazkiPublikoak.php';?>
+<?php include 'php/argazkiPribatuak.php';?>
 
 
 </div>

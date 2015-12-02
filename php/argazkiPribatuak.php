@@ -1,6 +1,6 @@
 <?php
 require_once 'konexioa.php';
-$sql="SELECT * FROM ARGAZKIA WHERE EGOERA='PUB'";
+$sql="SELECT * FROM ARGAZKIA WHERE EGOERA='PRI'";
 $result = $dblink->query($sql);
 $kont = 1;
 echo "<ul id='slider'>";

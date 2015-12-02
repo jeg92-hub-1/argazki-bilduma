@@ -1,6 +1,6 @@
 <?php
 
-include './php/config.php';
+include 'config.php';
 $dblink = new mysqli(HOST, USER, PASSWORD, DATABASE);
 
 	if(!mysqli_connect_errno()) {
