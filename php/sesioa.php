@@ -13,12 +13,12 @@ function mainMenua(){
 			echo "<li><a href='setProfile'>PROFILA KUDEATU</a></li>";
 		}
 		
-		echo "<li><a href='publicAlbum'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
+		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
 		echo "<li><a href='php/logout.php'>LOGOUT</a></li>";
 	}else{
 		echo "<li><a href='login'>LOGIN</a></li>";
 		echo "<li><a href='register'>ERREGISTRATU</a></li>";
-		echo "<li><a href='publicAlbum'>ARGAZKI PUBLIKOAK</a></li>";
+		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK</a></li>";
 	}
 }
 
@@ -37,7 +37,7 @@ function manageAlbumMenua(){
 			
 		}
 		
-		echo "<li><a href='publicAlbum'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
+		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
 		echo "<li><a href='./'>ATZERA</a></li>";
 	}else{
 		header('Location: ./');

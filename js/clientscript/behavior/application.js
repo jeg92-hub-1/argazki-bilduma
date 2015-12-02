@@ -2,6 +2,22 @@
 //Author: Brian R Miedlar (c) 2006-2009
 
 var AppBehavior = Class.create();
+
+var MyClass = function() {}
+
+MyClass.prototype.albumHorretakoIrudiakBistaratu = function(izenburu){
+	/*XMLHttpRequestObject = new XMLHttpRequest();
+	XMLHttpRequestObject.onreadystatechange = function(){
+		document.getElementById("irudiak").innerHTML="";
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+			document.getElementById("irudiak").innerHTML=XMLHttpRequestObject.responseText;
+		}
+	}
+	XMLHttpRequestObject.open("GET","../php/erab/nireArgazkiakerakutsi.php?IZENBURUA="+izenburu, true);
+	XMLHttpRequestObject.send();*/
+	alert(izenburu);
+}
+
 AppBehavior.Load = function() {
     OS.RegisterBehaviour(AppBehavior.CarouselRules);
 }
@@ -20,10 +36,12 @@ AppBehavior.CarouselRules = {
                 var sEmail = item.down('.description').innerHTML;
                 return { name: sCaption, email: sEmail };
             },
-            setItemEvents: function(carousel, itemElement, carouselItem, observer) {
+            setItemEvents: function(carousel, itemElement, carouselItem, observer,item) {
                 //This allows you to set events to the item like rollovers/mouse events
                 Event.observe(itemElement, 'click', function() {
                     carousel.activate(carouselItem);
+					var class1 = new MyClass();
+					class1.albumHorretakoIrudiakBistaratu(carouselItem.value.name);
                 });
                 Event.observe(itemElement, 'mouseover', function() {
                     Element.addClassName(itemElement, 'hover');
@@ -120,4 +138,3 @@ AppBehavior.fireDeactiveCarouselItem = function(carousel, element, item) {
 }
 
 AppBehavior.Load();
-	

@@ -34,15 +34,15 @@
 	<section class="main clearfix">
 	<div class="content">
 		<ul id="tabs">
-			<li><a href="#" title="tab1">Argazkiak +</a></li>
-			<li><a href="#" title="tab2">Argazkiak -</a></li>
-			<li><a href="#" title="tab3">Albuma +</a></li>
-			<li><a href="#" title="tab4">Albuma -</a></li>
+			<li><a href="#" title="tab1">Albuma +</a></li>
+			<li><a href="#" title="tab2">Albuma -</a></li>
+			<li><a href="#" title="tab2">Album baten deskribapena aldatu</a></li>
+			
 		</ul>
  
 		<div id="content1">
 			<div id="tab1">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+			<form>
 					<ul class="form-style-1">
 						<li>
 							<label>ALBUMAK: <span class="required">*</span></label>
@@ -68,7 +68,7 @@
 						</li>
 						
 						<li>
-							<input type="submit" value="GEHITU IRUDIA" />
+							<input type="button" value="GEHITU IRUDIA" />
 						</li>
 					</ul>
 				</form>

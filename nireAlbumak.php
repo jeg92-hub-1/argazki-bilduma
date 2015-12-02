@@ -34,7 +34,7 @@
 	<section class="main clearfix">
 
  <div id="Workspace">
-			<div id="carousels">
+		<div id="carousels">
             <div id="Carousel" class="carousel">
                 <div class="button navButton previous" style="display:none;">Up</div>
                 <div class="button navButton next" style="display:none;">Down</div>
@@ -49,29 +49,11 @@
                 <div class="button navButton previous" style="display:none;">Back</div>
                 <div class="button navButton next" style="display:none;">More</div>
                 <div class="container">
-                    <div class="items">
-                        <div class="item">
-                            <div class="key caption">Top</div>
-                            <div class="icon">
-                                <img width=65 height=65 src="images/gallery/top.small.jpg" />
-                            </div>
-                            <div class="picture">
-                                <img width=500 height=400 src="images/gallery/top.big.jpg" />
-                            </div>
-                        </div>            
-                        <div class="item">
-                            <div class="key caption">Boxcvzdvzv zsfgdfasdfasd</div>
-                            <div class="icon">
-                                <img width=65 height=65 src="images/gallery/box.small.jpg" />
-                            </div>
-                            <div class="picture">
-                                <img width="380px" height="320px" src="images/gallery/box.big.jpg" />
-                            </div>
-                        </div>            
+                    <div class="items" id="irudiak">   
                        
                     </div>
                 </div>
-				</div>
+			</div>
 		</div>
 		<div id="leftside">
 			<div id="Viewer" >

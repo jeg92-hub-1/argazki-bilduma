@@ -11,7 +11,7 @@
     <script type="text/javascript" src="js/main.js"></script>
 	<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 
-    <script type="text/javascript" src="js/editAlbum.js"></script>
+    <script type="text/javascript" src="js/editPhoto.js"></script>
 	<?php include 'php/sesioa.php' ?>
 	
 </head>
@@ -84,12 +84,11 @@
 			</div>
 			
 			<div id="tab2">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
+			<form enctype="multipart/form-data">
 					<ul class="form-style-1">
 						<li>
 							<label>ALBUMAK: <span class="required">*</span></label>
-							<select name="combobox_album"  id="cb_album" class="field-select" onchange="erakutsiArgazkiak(cb_album.value);">
-								<?php include 'php/erab/cb_albumak.php';?>
+							<select name="combobox_album"  id="cb_album2" class="field-select" onchange="erakutsiArgazkiak(cb_album.value);">
 							</select>
 						</li>
 						<li>
@@ -99,19 +98,12 @@
 						</li>
 						
 						<li>
-							<input type="submit" value="IRUDIA EZABATU" />
-							<?php
-							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								$nick = $_SESSION['login_nick'];
-								$etiketa = $_POST['ETIKETA'];
-								$albumIzenburua = $_POST['combobox_album'];
-								include 'php/erab/irudiaGehitu.php';
-							}
-							?>
+							<input type="button" value="IRUDIA EZABATU" />
+							
 						</li>
 					</ul>
 				</form>
-				<img id="thumbnil" style="display:none" src="" alt="image"/>
+				<img id="thumbnil1" style="display:none" src="" alt="image"/>
 			</div>
 			<div id="tab3">...</div>
 		</div>

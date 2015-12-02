@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/login-register.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/publicPhotos.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	<?php include 'php/sesioa.php'?>
@@ -28,6 +30,13 @@
 	</header><!-- end header -->
 
 	<section class="main clearfix">
+
+<div id="box">
+
+<?php include 'php/erakutsiArgazkiPublikoak.php';?>
+
+
+</div>
 
 
 	</section><!-- end main -->
