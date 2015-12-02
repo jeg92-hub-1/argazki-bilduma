@@ -22,13 +22,4 @@ while( $row = $result->fetch_array(MYSQLI_BOTH)) {
 }
 echo "</ul>";
 
-/*
-
-<ul id="thumb">
-	<li><a href="#1"><img src="images/image1.jpg" alt="grass-blades" width="50" height="50" /></a></li>
-	<li><a href="#2"><img src="images/image1.jpg" alt="ladybug" width="50" height="50" /></a></li>
-	<li><a href="#3"><img src="images/image1.jpg" alt="lotus" width="50" height="50" /></a></li>
-	<li><a href="#4"><img src="images/image1.jpg" alt="stones" width="50" height="50" /></a></li>
-
-</ul>*/
 ?>

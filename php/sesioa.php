@@ -9,11 +9,12 @@ function mainMenua(){
 			echo "<li><a href='setUser' >ERABILTZAILEAK KUDEATU</a></li>";
 			echo "<li><a href='manageAlbum'>ARGAZKI BILDUMAK KUDEATU</a></li>";
 		}else{
-			echo "<li><a href='manageAlbum'>ARGAZKI BILDUMAK KUDEATU</a></li>";
+			echo "<li><a href='manageAlbum'>NIRE ARGAZKIAK KUDEATU</a></li>";
 			echo "<li><a href='setProfile'>PROFILA KUDEATU</a></li>";
 		}
 		
 		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
+		echo "<li><a href='setProfile'>ARGAZKI PRIBATUAK IKUSI</a></li>";
 		echo "<li><a href='php/logout.php'>LOGOUT</a></li>";
 	}else{
 		echo "<li><a href='login'>LOGIN</a></li>";

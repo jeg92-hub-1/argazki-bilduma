@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="css/publicPhotos.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-	<?php include 'php/sesioa.php';?>
+	<?php include 'php/sesioa.php'?>
 	
 </head>
 <body>
@@ -33,9 +33,7 @@
 
 <div id="box">
 
-<?php
-	include 'php/argazkiPublikoak.php';
-?>
+<?php include 'php/erakutsiArgazkiPublikoak.php';?>
 
 
 </div>
