@@ -1,4 +1,4 @@
-XMLHttpRequestObject = new XMLHttpRequest();
+
 $(document).ready(function() {
         $("#content1 div").hide();
         $("#tabs li:first").attr("id","current");
@@ -77,5 +77,4 @@ function gordeIrudia(){
 	}
 	XMLHttpRequestObject.open("GET","./php/irudiaGehitu.php?IZENBURUA="+albumIzenburu+"&EGOERA="+egoera+"&ETIKETA="+etiketa+"&IRUDIA="+irudia, true);
 	XMLHttpRequestObject.send();
-	
 }

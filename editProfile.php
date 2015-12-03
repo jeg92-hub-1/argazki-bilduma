@@ -32,7 +32,7 @@
 	<h2>ZURE DATUAK SARTU</h2>
 	<form name="erregistro" id="hongkiat-form"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" >
 		<section id="aligned">
-			<p>NICK:</p><input type="text" name="NICK" id="nick" autocomplete="off" tabindex="1" class="txtinput" onchange="nickKonprobatu(nick.value)" required>
+			<p>NICK:</p><input type="text" name="NICK" id="nick" autocomplete="off" tabindex="1" class="txtinput" onchange="nickKonprobatu(nick.value)" disabled="disabled">
 			<p>IZENA:</p> <input type="text" name="IZENA" id="izena"  autocomplete="off" tabindex="2" class="txtinput" required>
 			<p>ABIZENAK:</p><input type="text" name="ABIZENAK" id="abizenak" autocomplete="off" tabindex="3" class="txtinput" required pattern="([a-zA-z]*\s[a-zA-z]*)*">
 		
@@ -44,6 +44,10 @@
 		<div id="mezua" >
 			<?php
 				if ($_SERVER["REQUEST_METHOD"] == "POST"){
+					$pasahitza= $_POST['PASAHITZA'];
+					$izena= $_POST['IZENA'];
+					$abizenak= $_POST['ABIZENAK'];
+					$email= $_POST['EMAIL'];
 					include "php/profilBerriaGorde.php";
 				}
 			?>

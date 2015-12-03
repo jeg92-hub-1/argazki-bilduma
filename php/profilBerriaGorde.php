@@ -1,10 +1,15 @@
 <?php
-	include 'konexioaAJAX.php';
-	session_start();
-	$nick=$_SESSION['login_nick'];
-	$sql="SELECT * FROM ERABILTZAILEA WHERE NICK='$nick'";
+	include 'konexioa.php';
+	$nick = $_SESSION['login_nick'];
+	$sql="UPDATE ERABILTZAILEA SET PASAHITZA='$pasahitza',IZENA='$izena',ABIZENAK='$abizenak',
+	EMAIL='$email' WHERE NICK='$nick';";
+	
 	$result=$dblink->query($sql);
-	$row = $result->fetch_array(MYSQLI_BOTH);
-	$profila = $row['NICK'].";".$row['PASAHITZA'].";".$row['IZENA'].";".$row['ABIZENAK'].";".$row['EMAIL'].";";
-	echo $profila;
+	$mezua = "<h1 style='";
+	if($result){
+		 $mezua  = $mezua  . "color:green;'>EGUNERATUA</h1>";
+	}else{
+		$mezua  = $mezua  . "color:red;'>ARAZOAK EGUNERATZERAKOAN</h1>";
+	}
+	echo $mezua;
 ?>

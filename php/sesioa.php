@@ -10,7 +10,7 @@ function mainMenua(){
 			echo "<li><a href='manageAlbum'>ARGAZKI BILDUMAK KUDEATU</a></li>";
 		}else{
 			echo "<li><a href='manageAlbum'>NIRE ARGAZKIAK KUDEATU</a></li>";
-			echo "<li><a href='editProfile'>PROFILA KUDEATU</a></li>";
+			echo "<li><a href='editProfile'>PROFILA EDITATU</a></li>";
 		}
 		
 		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
@@ -31,14 +31,14 @@ function manageAlbumMenua(){
 			echo "<li><a href='editAlbums'>ERABILTZAILEA EZABATU</a></li>";
 			echo "<li><a href='seeAllAlbum' >ALBUM GUZTIAK IKUSI</a></li>";
 			echo "<li><a href='editAlbums'>ALBUMAK EDITATU</a></li>";
+			echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
 		}else{
-			echo "<li><a href='nireAlbumak'>NIRE ALBUMAK IKUSI</a></li>";
+			echo "<li><a href='delimitPhotos'>ARGAZKI MUGATUAK</a></li>";
+			echo "<li><a href='myAllPhotos'>NIRE ARGAZKI GUZTIAK</a></li>";
 			echo "<li><a href='editPhoto'>ARGAZKIAK EDITATU</a></li>";
 			echo "<li><a href='editAlbum'>ALBUMAK EDITATU</a></li>";
 			
 		}
-		
-		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
 		echo "<li><a href='./'>ATZERA</a></li>";
 	}else{
 		header('Location: ./');

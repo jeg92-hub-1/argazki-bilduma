@@ -51,7 +51,7 @@
 						</li>
 						<li>
 							<label>EGOERA: <span class="required">*</span></label>
-							<select name="combobox_egoera"  id="cb_album" class="field-select">
+							<select name="combobox_egoera"  id="cb_egoera" class="field-select">
 								<option value="PUB" selected="selected">PUBLIKOA</option>
 								<option value="PRI" >PRIBATUA</option>
 								<option value="MUG" >MUGATUA</option>
@@ -89,6 +89,7 @@
 						<li>
 							<label>ALBUMAK: <span class="required">*</span></label>
 							<select name="combobox_album"  id="cb_album2" class="field-select" onchange="erakutsiArgazkiak(cb_album.value);">
+								<?php include 'php/erab/cb_albumak.php';?>
 							</select>
 						</li>
 						<li>
