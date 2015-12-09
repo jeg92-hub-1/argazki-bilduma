@@ -4,8 +4,8 @@ require_once ('lib/nusoap.php');
 require_once('lib/class.wsdlcache.php'); 
 
 
-//$ns="http://localhost/argazkiBilduma/service/myserver.php?wsdl";
- $ns="http://jonazkenpraktika.hol.es/argazkiBilduma/service/myserver.php?wsdl";
+$ns="http://localhost/argazkiBilduma/service/myserver.php?wsdl";
+ //$ns="http://jonazkenpraktika.hol.es/argazkiBilduma/service/myserver.php?wsdl";
 $server = new soap_server; 
 $server->configureWSDL('konprobatu',$ns);
 $server->wsdl->schemaTargetNamespace=$ns;

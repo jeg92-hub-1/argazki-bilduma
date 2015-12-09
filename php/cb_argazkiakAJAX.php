@@ -1,16 +1,18 @@
 <?php
-	include('./php/konexioaAJAX.php');
+	require 'konexioa.php';
 	session_start();
 	$izenburua=$_GET['albumIzenburua'];
 	
 	$nick = $_SESSION['login_nick'];
-	echo "<option value='" . $nick ."'>" .$nick."/". $izenburua . "</option>";
 	$sql="SELECT ALBUMID FROM ALBUMA WHERE NICK='".$nick."' AND IZENBURUA='".$izenburua."';";
+	
+	echo "<option value='" . $nick ."'>" .$nick."/". $izenburua . "/". $albumid."</option>";
 		// SQL exekutatu 
 	$result = $dblink->query($sql);
 	$row = $result->fetch_array(MYSQLI_BOTH);
 	$albumid=$row['ALBUMID'];
-	echo "<option value='" . $albumid ."'>" .$albumid. "</option>";
+	
+	echo "<option value='" . $nick ."'>" .$nick."/". $izenburua . "/". $albumid."</option>";
 	$sql="SELECT ETIKETA FROM ARGAZKIA WHERE NICK='".$nick."' AND ALBUMID=".$albumid.";";
 	$result = $dblink->query($sql);
 	$kont =0;

@@ -32,7 +32,7 @@
 	<h2>ZURE DATUAK SARTU</h2>
 	<form name="erregistro" id="hongkiat-form"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" >
 		<section id="aligned">
-			<p>NICK:</p><input type="text" name="NICK" id="nick" placeholder="Adb:Jon" autocomplete="off" tabindex="1" class="txtinput" onchange="nickKonprobatu(nick.value)" required>
+			<p>NICK:</p><input type="text" name="NICK" id="nick" placeholder="Adb:Jon" autocomplete="off" tabindex="1" class="txtinput" onchange="nickKonprobatu(this)" required>
 			<p>IZENA:</p> <input type="text" name="IZENA" id="izena" placeholder="Adb:Jon" autocomplete="off" tabindex="2" class="txtinput" required>
 			<p>ABIZENAK:</p><input type="text" name="ABIZENAK" id="abizenak" placeholder="Adb:Egana Granado" autocomplete="off" tabindex="3" class="txtinput" required pattern="([a-zA-z]*\s[a-zA-z]*)*">
 		

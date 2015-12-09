@@ -5,7 +5,7 @@ require_once('lib/class.wsdlcache.php');
 $nick = $_GET['NICK'];
 
 //Web zerbitzariaren URL-a
-$wsdl = "http://localhost:80/argazkiBilduma/service/myserver.php";
+$wsdl = "http://localhost:8080/argazkiBilduma/service/myserver.php";
 //Erabiltzaile objektua sortzen
 $client = new nusoap_client($wsdl, false);
 
@@ -16,12 +16,11 @@ if ($err) {
 	echo '<h2>Eraikitzerakoan arazoren bat egon da.</h2>' . $err;
 }
  
-$erantzuna = "<h1";
+$erantzuna = "<h3";
 $result1 = $client->call('konprobatu', array('nick'=>$nick));
-echo $result1 . "fassefa";
 
 if(strcmp($result1,"BAI")==0){
-		$erantzuna  = $erantzuna  . "color:red;'>EXISTITZENDA!!</h1>";
+		$erantzuna  = $erantzuna  . " style='color:red;'>EXISTITZENDA!!</h3>";
 		echo $erantzuna;
 }
 

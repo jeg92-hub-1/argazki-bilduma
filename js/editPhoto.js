@@ -11,18 +11,7 @@ $(document).ready(function() {
         $("#tabs li").attr("id","");
         $(this).parent().attr("id","current");
         $('#' + $(this).attr('title')).fadeIn();
-		/*
-		XMLHttpRequestObject.onreadystatechange = function(){
-		document.getElementById("cb_album2").innerHTML="";
-		alert('adfsf');
-		
-		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
-			document.getElementById("cb_album2").innerHTML=XMLHttpRequestObject.responseText;
-			}
-		}
-		XMLHttpRequestObject.open("GET","./php/erab/cb_albumak.php", true);
-		XMLHttpRequestObject.send();
-		*/
+
 		
     });
 })();
@@ -49,15 +38,18 @@ function showMyImage(fileInput) {
 }
 
 function erakutsiArgazkiak(albumizenburu){
-	XMLHttpRequestObject.onreadystatechange = function(){
+		XMLHttpRequestObject = new XMLHttpRequest();
+
+		XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("cb_argazkiak").innerHTML="";
 		alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById("cb_argazkiak").innerHTML=XMLHttpRequestObject.responseText;
 		}
 	}
-	XMLHttpRequestObject.open("GET","./php/erab/cb_argazkiakAJAX.php?albumIzenburua="+albumizenburu, true);
+	XMLHttpRequestObject.open("GET","./php/cb_argazkiakAJAX.php?albumIzenburua="+albumizenburu, true);
 	XMLHttpRequestObject.send();
+	
 }
 
 function gordeIrudia(){
