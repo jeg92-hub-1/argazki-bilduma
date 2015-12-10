@@ -5,6 +5,8 @@
 	
 	$result = $dblink->query($sql);
 	$kont =0;
+	echo "<option value='-'>".'- - - - -'."</option>";
+		
 	while( $row = $result->fetch_array(MYSQLI_BOTH)) {
 		if($kont = 0){
 			$kont = $kont + 1;

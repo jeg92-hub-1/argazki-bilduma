@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
-	<link rel="stylesheet" type="text/css" href="css/publicPhotos.css">
+	<link rel="stylesheet" type="text/css" href="css/carouselPhotos.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	<?php include 'php/sesioa.php';?>

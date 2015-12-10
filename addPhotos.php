@@ -3,11 +3,10 @@
 <html lang="en">
 <head>
 	<title>ARGAZKI BILDUMA</title>
-<?php 
-	echo "<link rel='stylesheet' type='text/css' href='css/reset.css'>";
-	echo "<link rel='stylesheet' type='text/css' href='css/main.css'>";
-	echo "<link rel='stylesheet' type='text/css' href='css/editAlbum.css'>";
-	?>
+ 
+	<link rel='stylesheet' type='text/css' href='css/reset.css'>
+	<link rel='stylesheet' type='text/css' href='css/main.css'>
+	<link rel='stylesheet' type='text/css' href='css/settingPhotos.css'>
     
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -19,31 +18,17 @@
 </head>
 <body>
 <div id="container">
-	<header>
-		<div class="logo">
-			<p><h1>BILDUMA KUDEAKETA</h1></p>
+<div class="logo">
+			<p><h1>ARGAZKI BILDUMA</h1></p>
 		</div>
 
-		<div id="menu_icon"></div>
-		<nav>
-			<ul>
-				<?php manageAlbumMenua()?>
+		<nav id="menu">
+			<ul class="parent-menu">
+				<?php mainMenua()?>
 			</ul>
 		</nav><!-- end navigation menu -->
-
-	</header><!-- end header -->
-
-	<section class="main clearfix">
-	<div class="content">
-		<ul id="tabs">
-			<li><a href="#" title="tab1">Argazkiak +</a></li>
-			<li><a href="#" title="tab2">Argazkiak -</a></li>
-			<li><a href="#" title="tab3">Argazki etiketa/egoera aldatu</a></li>
-		</ul>
- 
-		<div id="content1">
-			<div id="tab1">
-			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
+	<section class="main">
+		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
 					<ul class="form-style-1">
 						<li>
 							<label>ALBUMAK: <span class="required">*</span></label>
@@ -83,34 +68,9 @@
 					</ul>
 				</form>
 				<img id="thumbnil" style="display:none" src="" alt="image"/>
-			</div>
-			
-			<div id="tab2">
-			<form enctype="multipart/form-data">
-					<ul class="form-style-1">
-						<li>
-							<label>ALBUMAK: <span class="required">*</span></label>
-							<select name="combobox_album"  id="cb_album2" class="field-select" onchange="erakutsiArgazkiak(cb_album.value);">
-								<?php include 'php/erab/cb_albumak.php';?>
-							</select>
-						</li>
-						<li>
-							<label>ARGAZKIAK: <span class="required">*</span></label>
-							<select name="combobox_argazkiak"  id="cb_argazkiak" class="field-select" onchange="erakutsiArgazkia(cb_album.value,cb_argazkiak.value)">
-							</select>
-						</li>
-						
-						<li>
-							<input type="button" value="IRUDIA EZABATU" />
-							
-						</li>
-					</ul>
-				</form>
-				<img id="thumbnil1" style="display:none" src="" alt="image"/>
-			</div>
-			<div id="tab3">...</div>
-		</div>
-	</div>
+	</section>
+	
 </div>
 </body>
 </html>
+			
