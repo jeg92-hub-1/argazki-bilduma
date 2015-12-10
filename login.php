@@ -8,8 +8,8 @@ include "php/sesioa.php";
 	<title>ARGAZKI BILDUMA</title>
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	
@@ -17,39 +17,33 @@ include "php/sesioa.php";
 </head>
 <body>
 <div id="container">
-	<header>
 		<div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
 		</div>
-
-		<div id="menu_icon"></div>
-		<nav>
-			<ul>
-			<?php mainMenua(); ?>
+		<nav id="menu">
+			<ul class="parent-menu">
+				<?php mainMenua()?>
 			</ul>
 		</nav><!-- end navigation menu -->
 
-	</header><!-- end header -->
-
-	<section class="main clearfix">
-<center>
- <div class="content login-card">
-		<h1>LOG-IN</h1>
-		<br>
-		<form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST"  >
-			<input type="text" name="user" placeholder="NICK/EMAIL" required>
-			<input type="password" name="pass" placeholder="PASAHITZA" required>
-			<input type="submit" name="login" class="login login-submit" value="LOGIN">
-		</form>
-		<div class="login-help">
-			<a href="register.php">Erregistratu</a> | <a href="forgotPassword.php">Pasahitza ahaztu duzu</a>
+	<section class="main">
+		<center>
+		<div class="login-card">
+			<h1>LOG-IN</h1>
+			<br>
+			<form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"  method="POST"  >
+				<input type="text" name="user" placeholder="NICK/EMAIL" required>
+				<input type="password" name="pass" placeholder="PASAHITZA" required>
+				<input type="submit" name="login" class="login login-submit" value="LOGIN">
+			</form>
+			<div class="login-help">
+				<a href="register.php">Erregistratu</a> | <a href="forgotPassword.php">Pasahitza ahaztu duzu</a>
+			</div>
+			<?php
+				include 'php/login_prozezatu.php';
+			?>
 		</div>
-		<?php
-			include 'php/login_prozezatu.php';
-		?>
-	</div>
-</center>
-
+		</center>
 	</section><!-- end main -->
 </div>
 </body>

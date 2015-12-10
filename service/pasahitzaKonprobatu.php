@@ -1,30 +1,34 @@
 <?php
-require_once ('lib/nusoap.php');
+require ('lib/nusoap.php');
+require_once('lib/class.wsdlcache.php'); 
 
 $pass = $_GET['PASAHITZA'];
-$pass1 = $_GET['PASAHITZA1'];
 
 //Web zerbitzariaren URL-a
-$wsdl = "http://sw14.hol.es/ServiciosWeb/comprobarcontrasena.php?wsdl";
- 
+$wsdl = "http://localhost:8080/argazkiBilduma/service/myserver.php";
 //Erabiltzaile objektua sortzen
-$client = new nusoap_client($wsdl, 'wsdl');
+$client = new nusoap_client($wsdl, false);
 
 //Errorern bat egon den
 $err = $client->getError();
 if ($err) {
 	// Display the error
 	echo '<h2>Eraikitzerakoan arazoren bat egon da.</h2>' . $err;
-        //exit();
 }
  
-$erantzuna = "<h1 style='";
-$result1=$client->call('comprobar', array('x'=>$pass,'y'=>$pass1));
+$erantzuna = "<h3 style='";
+$result1 = $client->call('errexegiaPasahitzaDa', array('pasashitza'=>$pass));
 
-if(strcmp($result1,"INVALIDA")==0)
-	$erantzuna  = $erantzuna  . "color:red;'>Pasahitz errexegia</h1>";
-else
-	$erantzuna  =  $erantzuna . "color:green;'>ONDO</h1>";
+if(strcmp($result1,"ERREXEGIA")==0)
+	$erantzuna  = $erantzuna  . "color:red;'>Pasahitz errexegia</h3>&G";
+else{
+	$result1 = $client->call('pasahitzaKonprobatu', array('pass'=>$pass));
+	if(strcmp($result1,"ERABILITA")==0)
+		$erantzuna  =  $erantzuna . "color:red;'>ERABILITA</h3>&G";
+	else
+		$erantzuna  =  $erantzuna . "color:green;'>EGOKIA</h3>&O";
+}
+
 
 echo $erantzuna;
 ?>

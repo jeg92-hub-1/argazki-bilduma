@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/myscript.js"></script>
@@ -14,20 +15,16 @@
 </head>
 <body>
 <div id="container">
-	<header>
 		<div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
 		</div>
 
-		<div id="menu_icon"></div>
-		<nav>
-			<ul>
+
+		<nav id="menu">
+			<ul class="parent-menu">
 				<?php mainMenua()?>
 			</ul>
 		</nav><!-- end navigation menu -->
-
-	</header><!-- end header -->
-
 	<section class="main">
 	<h2>ZURE DATUAK SARTU</h2>
 	<form name="erregistro" id="hongkiat-form"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" >
@@ -39,8 +36,8 @@
 		</section>
 		<section id="aside">	
 				<p>EPOSTA:</p><input type="email" name="EMAIL" id="email" placeholder="Adb:myname001@gmail.com" autocomplete="off" tabindex="4" class="txtinput" pattern="^[a-z]*[0-9]{3}(\@gmail|\@hotmail)(\.es|\.com)$" required onchange="emailKonprobatu(this)">
-					<p>PASAHITZA:</p><input type="password" name="PASAHITZA" id="password" placeholder="Adb:123456" autocomplete="off" tabindex="5" class="txtinput" required onchange="pasahitzaBalidatu(password.value)">
-					<p>PASAHITZA:</p><input type="password" name="PASAHITZA2" id="password2" placeholder="Adb:123456" autocomplete="off" tabindex="6" class="txtinput" onchange="pasahitzaBalidatu(password.value,password2.value)">
+					<p>PASAHITZA:</p><input type="password" name="PASAHITZA" id="password" placeholder="Adb:123456" autocomplete="off" tabindex="5" class="txtinput" required onchange="lehenengoPasahitzaBalidatu(this)">
+					<p>PASAHITZA:</p><input type="password" name="PASAHITZA2" id="password2" placeholder="Adb:123456" autocomplete="off" tabindex="6" class="txtinput" onchange="pasahitzakBalidatu(password.value,password2.value)">
 		</section>
 		<div id="mezua" >
 					

@@ -1,10 +1,16 @@
 /** the form elements **/
-#hongkiat-form { height:100%; text-align:center; padding-left:3%; margin-top:0;}
+#hongkiat-form {
+	height:100%;
+	text-align:center;
+	padding-left:3%;
+	margin-top:0;}
+	
 .main h2 {
 color: #363636;
 font-family: "Droid Serif", Georgia, serif; 
-
+padding:1%;
 text-align: center; 
+margin-top:0;
 }
 
 /** Erregistroarentzat **/
@@ -15,7 +21,7 @@ font-family: "Helvetica Neue", Arial, sans-serif;
 border-style: solid;
 border-width: 1px;
 border-color: #dedede;
-margin-top:3%;
+margin-top:1.5%;
 margin-bottom: 30px;
 font-size: 2.2em;
 padding: 5px 5px;
@@ -44,7 +50,7 @@ outline: 0 none;
 #hongkiat-form #aligned { 
 box-sizing: border-box; 
 float: left; 
-width: 50%;
+width: 40%;
 font-size:0.6em; 
 font-family: "Droid Serif", Georgia, serif; 
 }
@@ -52,7 +58,7 @@ font-family: "Droid Serif", Georgia, serif;
 
 #hongkiat-form #aside {
 	float: left;
-	width: 50%;
+	width: 45%;
 	padding: 0;
 	box-sizing: border-box;
 	
@@ -62,7 +68,7 @@ font-size:0.6em;
 
 #aside p,#aligned p{font-size: 2em;}
 
-#mezua { display: block;width:98%; margin-top:0; height:5%;
+#mezua { display: block;width:98%; margin-bottom:1%; height:5%;
 float:left; }
 
 #buttons { display: block;width:100%; margin-top:0;
@@ -105,7 +111,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4edbd', end
   padding: 40px;
   width:60%;
   background-color: #F7F7F7;
-  margin: 0 auto 10px;
+  margin-left:-12%;
   border-radius: 2px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
   overflow: hidden;

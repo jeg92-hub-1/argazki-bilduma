@@ -5,8 +5,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/login-register.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 	<link rel="stylesheet" type="text/css" href="css/publicPhotos.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -15,21 +14,16 @@
 </head>
 <body>
 <div id="container">
-	<header>
 		<div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
 		</div>
 
-		<div id="menu_icon"></div>
-		<nav>
-			<ul>
+		<nav id="menu">
+			<ul class="parent-menu">
 				<?php mainMenua(); ?>
 			</ul>
 		</nav><!-- end navigation menu -->
-
-	</header><!-- end header -->
-
-	<section class="main clearfix">
+	<section class="main">
 
 <div id="box">
 

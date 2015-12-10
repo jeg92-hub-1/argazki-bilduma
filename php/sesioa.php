@@ -3,45 +3,53 @@
 session_start();
 
 function mainMenua(){
-	echo "<li><a href='./'>HASIERA</a></li>";
+	//Logeatu gabeko erabiltzailea
+	echo "<li><a href='./'>HASIERA <img src='images/home.ico'/></a></li>";
 	if(isset($_SESSION['login_email']) && isset($_SESSION['login_rol'])){
 		if($_SESSION['login_rol']=="ADMIN"){
-			echo "<li><a href='setUser' >ERABILTZAILEAK KUDEATU</a></li>";
-			echo "<li><a href='manageAlbum'>ARGAZKI BILDUMAK KUDEATU</a></li>";
-		}else{
-			echo "<li><a href='manageAlbum'>NIRE ARGAZKIAK KUDEATU</a></li>";
-			echo "<li><a href='editProfile'>PROFILA EDITATU</a></li>";
-		}
-		
-		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
-		echo "<li><a href='privatePhotos'>ARGAZKI PRIBATUAK IKUSI</a></li>";
-		echo "<li><a href='php/logout.php'>LOGOUT</a></li>";
-	}else{
-		echo "<li><a href='login'>LOGIN</a></li>";
-		echo "<li><a href='register'>ERREGISTRATU</a></li>";
-		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK</a></li>";
-	}
-}
-
-function manageAlbumMenua(){
-
-	if(isset($_SESSION['login_email'])){
-		echo "<li><a href='manageAlbum'>HASIERA </a></li>";
-		if($_SESSION['login_rol']=="ADMIN"){
-			echo "<li><a href='editAlbums'>ERABILTZAILEA EZABATU</a></li>";
-			echo "<li><a href='seeAllAlbum' >ALBUM GUZTIAK IKUSI</a></li>";
-			echo "<li><a href='editAlbums'>ALBUMAK EDITATU</a></li>";
-			echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK IKUSI</a></li>";
-		}else{
-			echo "<li><a href='delimitPhotos'>ARGAZKI MUGATUAK</a></li>";
-			echo "<li><a href='myAllPhotos'>NIRE ARGAZKI GUZTIAK</a></li>";
-			echo "<li><a href='editPhoto'>ARGAZKIAK EDITATU</a></li>";
-			echo "<li><a href='editAlbum'>ALBUMAK EDITATU</a></li>";
+			//Administratzailearen  menua
+			echo "<li><a href='#' >ERABILTZAILEA <img src='images/settings.ico'/></a>";
+			echo "<ul>";
+				echo "<li><a href='#'>ERABILTZAILE <img src='images/remove.ico'/> </a></li>";
+				echo "<li><a href='editAlbums'>ADMIN <img src='images/add.ico'/></a></li>";
+			echo "</ul>";
+			echo "</li>";
 			
+			echo "<li><a href='#'>ALBUMAK <img src='images/settings.ico'/></a>";
+			echo "<ul>";
+				echo "<li><a href='seeAllAlbum'> ALBUM GUZTIAK <img src='images/xeyes.ico'/></a></li>";
+				echo "<li><a href='editAlbums'>ALBUMAK  <img src='images/pen.ico'/></a></li>";
+			echo "</ul>";
+			echo "</li>";
+		}else{
+			//Erabiltzailearen menua
+			echo "<li><a href='#'>NIRE ARGAZKIAK <img src='images/settings.ico'/></a>";
+			echo "<ul>";
+				echo "<li><a href='delimitPhotos'>ARGAZKIAK MUGATUAK <img src='images/xeyes.ico'/></a></li>";
+				echo "<li><a href='addPhotos'>ARGAZKIAK <img src='images/add.ico'/> </a></li>";				
+				echo "<li><a href='removePhotos'>ARGAZKIAK <img src='images/remove.ico'/> </a></li>";
+				echo "<li><a href='editPhotos'>ARGAZKIAK <img src='images/pen.ico'/></a></li>";
+			echo "</ul>";
+			echo "</li>";
+			echo "<li><a href='#'>NIRE ALBUMAK <img src='images/settings.ico'/></a>";
+			echo "<ul>";
+				echo "<li><a href='addAlbum'>ALBUMAK <img src='images/add.ico'/> </a></li>";				
+				echo "<li><a href='removeAlbums'>ALBUMAK <img src='images/remove.ico'/> </a></li>";
+				echo "<li><a href='editAlbums'>ALBUMAK <img src='images/pen.ico'/></a></li>";
+			echo "</ul>";
+			echo "</li>";
+			
+			echo "<li><a href='editProfile'>PROFILA <img src='images/pen.ico'/></a></li>";
 		}
-		echo "<li><a href='./'>ATZERA</a></li>";
+		//Aurreko aukerak + orain aipatzen direnak(bi rolentzako balio dute)
+		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK <img src='images/xeyes.ico'/></a></li>";
+		echo "<li><a href='privatePhotos'>ARGAZKI PRIBATUAK <img src='images/xeyes.ico'/></a></li>";
+		echo "<li><a href='php/logout.php'>LOGOUT <img src='images/logout.ico'/></a></li>";
 	}else{
-		header('Location: ./');
+		//Logeatu gabeko erabiltzaileentzat
+		echo "<li><a href='login'>LOGIN <img src='images/login.ico'/></a></li>";
+		echo "<li><a href='register'>ERREGISTRATU <img src='images/signup.ico'/></a></li>";
+		echo "<li><a href='publicPhotos'>ARGAZKI PUBLIKOAK <img src='images/xeyes.ico'/></a></li>";
 	}
 }
 

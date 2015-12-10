@@ -6,7 +6,7 @@ $kont = 1;
 echo "<ul id='slider'>";
 while( $row = $result->fetch_array(MYSQLI_BOTH)) {
 	echo "<li id='".$kont."'>";
-		echo '<img alt="default" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="700" height="438" />';
+		echo '<img alt="default" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="700" height="350" />';
 		echo "<p><span>".$row['ETIKETA']." - ". $row['NICK']."</span></p>";
 	echo "</li>";
 	$kont = $kont + 1;

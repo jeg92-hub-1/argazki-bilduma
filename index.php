@@ -13,27 +13,21 @@
 </head>
 <body>
 <div id="container">
-	<header>
 		<div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
 		</div>
-
-		<div id="menu_icon"></div>
-		<nav>
-			<ul>
+		<nav id="menu">
+			<ul class="parent-menu">
 				<?php mainMenua()?>
 			</ul>
 		</nav><!-- end navigation menu -->
 
-	</header><!-- end header -->
-
-	<section class="main clearfix">
-	<div class="content">
-	<center>
-		<img src="images/image1.jpg">
+	<section class="main">
+		<center>
+			<img class="content" src="images/image1.jpg">
 		</center>
 	</section>
-	</div>
+	
 </div>
 </body>
 </html>
