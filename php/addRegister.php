@@ -22,6 +22,10 @@ if($result) {
 	$txt = $pasahitza . "\n";
 	fwrite($file, $txt);
 	fclose($file);
+	$file=fopen('./file/email.txt','a') or die("Unable to open file!");
+	$txt = $email . "\n";
+	fwrite($file, $txt);
+	fclose($file);
 	echo "<h1 id='msg' style='color:green'>Dena ondo joan da</h1>";
 }
 
