@@ -1,10 +1,9 @@
 /** the form elements **/
 #hongkiat-form {
-	height:100%;
+	height:90%;
 	text-align:center;
 	padding-left:3%;
-	margin-top:0;}
-	
+	}
 .main h2 {
 color: #363636;
 font-family: "Droid Serif", Georgia, serif; 
@@ -14,14 +13,15 @@ margin-top:0;
 }
 
 /** Erregistroarentzat **/
-
+#hongkiat-form  p{
+	padding:0.6%;
+}
 #hongkiat-form .txtinput { 
 display: block;
 font-family: "Helvetica Neue", Arial, sans-serif;
 border-style: solid;
 border-width: 1px;
 border-color: #dedede;
-margin-top:1.5%;
 margin-bottom: 30px;
 font-size: 2.2em;
 padding: 5px 5px;
@@ -71,14 +71,14 @@ font-size:0.6em;
 #mezua { display: block;width:98%; margin-bottom:1%; height:5%;
 float:left; }
 
-#buttons { display: block;width:100%; margin-top:0;
+#buttons { display: block;width:92%; margin-top:0;
 float:left; }
 
 #submitbtn {
 	background-color: grey;
 	margin-top:1%;
-	width:96.5%;
-	float:left;
+	width:89%;
+	float:right;
 height: 2em;
 border: 1px solid;
 font-weight: bold;
@@ -91,7 +91,8 @@ cursor: pointer;
 border-radius: 2px;
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2eeaf', endColorstr='#90b026',GradientType=0 );
 }
-#buttons #submitbtn:hover, #buttons #submitbtn:active, {
+
+#buttons #submitbtn:hover, #buttons #submitbtn:active{
 border-color: #808080;
 color: #fff;
 background: #808080;
@@ -103,106 +104,3 @@ background: -ms-linear-gradient(top, #808080 2%, #808085 3%, #808080 100%);
 background: linear-gradient(top, #808080 2%, #808085 3%, #808080 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4edbd', endColorstr='#808080',GradientType=0 );
 }
-
-
-/** login **/
-
-.login-card {
-  padding: 40px;
-  width:60%;
-  background-color: #F7F7F7;
-  margin-left:-12%;
-  border-radius: 2px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-}
-
-
-.login-card h1 {
-  font-weight: 100;
-  text-align: center;
-  font-size: 2.3em;
-}
-
-.login-card input[type=submit] {
-  width: 100%;
-  display: block;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.login-card input[type=text], .login-card input[type=password] {
-  height: 44px;
-  font-size: 16px;
-  width: 100%;
-  margin-top:10px;
-  margin-bottom: 20px;
-  -webkit-appearance: none;
-  background: #fff;
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  /* border-radius: 2px; */
-  padding: 0 8px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-.login-card input[type=text]:hover, .login-card input[type=password]:hover {
-  border: 1px solid #b9b9b9;
-  border-top: 1px solid #a0a0a0;
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-}
-
-.login {
-  text-align: center;
-  font-size: 14px;
-  font-family: 'Arial', sans-serif;
-  font-weight: 700;
-  height: 36px;
-  padding: 0 8px;
-/* border-radius: 3px; */
-/* -webkit-user-select: none;
-  user-select: none; */
-}
-
-.login-submit {
-  /* border: 1px solid #3079ed; */
-  border: 0px;
-  color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1);
-margin-top:10px;  
-  background-color: #808080;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
-}
-
-.login-submit:hover {
-  /* border: 1px solid #2f5bb7; */
-  border: 0px;
-  text-shadow: 0 1px rgba(0,0,0,0.3);
-  background-color: #696969;
-  cursor: true;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
-}
-
-.login-card a {
-  text-decoration: none;
-  color: #666;
-  font-size:1.8em;
-  text-align: center;
-  display: inline-block;
-  opacity: 0.6;
-  transition: opacity ease 0.5s;
-}
-
-.login-card a:hover {
-  opacity: 1;
-}
-
-.login-help {
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-}
-

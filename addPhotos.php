@@ -12,7 +12,7 @@
     <script type="text/javascript" src="js/main.js"></script>
 	<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 
-    <script type="text/javascript" src="js/editPhoto.js"></script>
+    <script type="text/javascript" src="js/settingPhotos.js"></script>
 	<?php include 'php/sesioa.php' ?>
 	
 </head>
