@@ -43,10 +43,22 @@ function argazkiaBistaratu(albumizenburu,etiketa){
 		//alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById("irudiaIkusi").innerHTML=XMLHttpRequestObject.responseText;
+			document.getElementById("etiketa").value=etiketa;
 		}
 	}
 	XMLHttpRequestObject.open("GET","./php/erakutsiArgazkia.php?albumIzenburua="+albumizenburu+"&etiketa="+etiketa, true);
 	XMLHttpRequestObject.send();
 	
+}
+function erakutsiNireArgazkiak(egoera){
+	XMLHttpRequestObject.onreadystatechange = function(){
+		document.getElementById("carousel").innerHTML="";
+		//alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+			document.getElementById("carousel").innerHTML=XMLHttpRequestObject.responseText;
+		}
+	}
+	XMLHttpRequestObject.open("GET","./php/nireArgazkiakerakutsi.php?EGOERA="+egoera.value, true);
+	XMLHttpRequestObject.send();
 }
 

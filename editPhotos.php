@@ -21,7 +21,7 @@
 </head>
 <body>
 <div id="container">
-<div class="logo">
+		<div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
 		</div>
 
@@ -43,19 +43,25 @@
 							<label>ARGAZKIAK: <span class="required">*</span></label>
 							<select name="combobox_argazkiak"  id="cb_argazkiak" class="field-select" onchange="argazkiaBistaratu($('#cb_album option:selected').text(),this.value);">
 							</select>
-							
+						</li>
+						<li>
+							<label>ETIKETA: <span class="required">*</span></label>
+							<input type="text" name="ETIKETA" id="etiketa" class="field-long" required/></li>
+							</select>
 						</li>
 						<li>
 							<input type="submit" value="EZABATU IRUDIA" />
 							<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								include 'php/erab/irudiaKendu.php';
+								include 'php/erab/irudiaAldatu.php';
 							}
 							?>
 						</li>
 					</ul>
+		</form>
 					<div id="irudiaIkusi">
 					</div>
+					
 	</section>
 	
 </div>
