@@ -32,7 +32,7 @@
 					<ul class="form-style-1">
 						<li>
 							<label>ALBUMAK: <span class="required">*</span></label>
-							<select name="combobox_album"  id="cb_album" class="field-select" >
+							<select name="combobox_album"  id="cb_album" class="field-select" onchange="showValue($('#cb_album option:selected').text());">
 								<?php include 'php/erab/cb_albumak.php';?>
 							</select>
 						</li>

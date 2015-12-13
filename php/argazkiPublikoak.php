@@ -16,7 +16,7 @@ $result = $dblink->query($sql);
 $kont = 1;
 echo "<ul id='thumb'>";
 while( $row = $result->fetch_array(MYSQLI_BOTH)) {
-	echo '<li><a href="#'.$kont.'"><img alt="default" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="50" height="50" /></a></li>';
+	echo '<li><a href="#'.$kont.'"><img alt="'.$row["ETIKETA"].'" onclick="bistaratuAlerta(this)" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="50" height="50" /></a></li>';
 	$kont = $kont + 1;
 		
 }

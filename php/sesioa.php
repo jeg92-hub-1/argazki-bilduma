@@ -33,7 +33,8 @@ function mainMenua(){
 			echo "</li>";
 			echo "<li><a href='#'>NIRE ALBUMAK <img src='images/settings.ico'/></a>";
 			echo "<ul>";
-				echo "<li><a href='addAlbum'>ALBUMAK <img src='images/add.ico'/> </a></li>";				
+				echo "<li><a href='infoAlbums'>ALBUMAK <img src='images/info.ico'/> </a></li>";				
+				echo "<li><a href='addAlbums'>ALBUMAK <img src='images/add.ico'/> </a></li>";				
 				echo "<li><a href='removeAlbums'>ALBUMAK <img src='images/remove.ico'/> </a></li>";
 				echo "<li><a href='editAlbums'>ALBUMAK <img src='images/pen.ico'/></a></li>";
 			echo "</ul>";

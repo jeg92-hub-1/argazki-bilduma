@@ -1,5 +1,4 @@
 XMLHttpRequestObject = new XMLHttpRequest();
-s
 
 function showMyImage(fileInput) {
         var files = fileInput.files;
@@ -62,3 +61,14 @@ function erakutsiNireArgazkiak(egoera){
 	XMLHttpRequestObject.send();
 }
 
+function bistaratuAlerta(img){
+	var etiketa=img.getAttribute('alt');
+	XMLHttpRequestObject.onreadystatechange = function(){
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+			var testua= XMLHttpRequestObject.responseText;
+			alert(testua);
+		}
+	}
+	XMLHttpRequestObject.open("GET","./php/bisitaGehitu.php?ETIKETA="+etiketa, true);
+	XMLHttpRequestObject.send();
+}
