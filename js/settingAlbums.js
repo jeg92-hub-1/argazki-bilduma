@@ -1,6 +1,6 @@
 XMLHttpRequestObject = new XMLHttpRequest();
 
-function deskribapenaErakutsi(izenburua){
+function bistaratuDeskribapenaEtaAlbuma(izenburua){
 	
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("deskribapena").innerHTML="";
@@ -17,7 +17,7 @@ function deskribapenaErakutsi(izenburua){
 			
 		}
 	}
-	XMLHttpRequestObject.open("GET","./php/erakutsiDeskribapenaEtaAlbuma.php?IZENBURUA="+izenburua.value, true);
+	XMLHttpRequestObject.open("GET","./php/erakutsiDeskribapenaEtaAlbuma.php?IZENBURUA="+izenburua.value+"&EGOERA=carouselakin", true);
 	XMLHttpRequestObject.send();
 }
 
@@ -29,5 +29,18 @@ function datuakKargatu(){
 		}
 	}
 	XMLHttpRequestObject.open("GET","./php/cb_albumKargatu.php", true);
+	XMLHttpRequestObject.send();
+}
+
+function erakutsiDeskribapena(izenburua){
+	
+	XMLHttpRequestObject.onreadystatechange = function(){
+		document.getElementById("deskribapena").innerHTML="";
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+			document.getElementById("deskribapena").innerHTML= XMLHttpRequestObject.responseText;
+			
+		}
+	}
+	XMLHttpRequestObject.open("GET","./php/erakutsiDeskribapenaEtaAlbuma.php?IZENBURUA="+izenburua.value+"&EGOERA=carouselgabe", true);
 	XMLHttpRequestObject.send();
 }

@@ -36,7 +36,6 @@
 				<li>
 					<label>ALBUMAK: <span class="required">*</span></label>
 					<select name="combobox_album"  id="cb_album" class="field-select" required>
-						<?php include 'php/erab/cb_albumak.php';?>
 					</select>
 				</li>
 				<li>

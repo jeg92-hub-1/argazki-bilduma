@@ -25,31 +25,28 @@
 		</nav><!-- end navigation menu -->
 	<section class="main">
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
-					<ul class="form-style-1">
-						<li>
-							<label>ALBUM IZENBURUA: <span class="required">*</span></label>
-							<input type="text" name="IZENBURUA" id="izenburua" class="field-long" required/>
-						</li>
-						<li>
-							<label>ALBUM DESKRIBAPENA: <span class="required">*</span></label>
-							<textarea id="deskribapena" name="deskribapena" style='width:100%;resize:none' required></textarea>
-						</li>
-
-						
-						<li>
-							<input type="submit" value="GEHITU ALBUMA" />
-							<?php
-								if ($_SERVER["REQUEST_METHOD"] == "POST"){
-									$nick = $_SESSION['login_nick'];
-									$izenburua = $_POST['IZENBURUA'];
-									$deskribapena = $_POST['deskribapena'];
-									include 'php/erab/albumGehitu.php';
-								}
-							?>
-						</li>
-					</ul>
-				</form>
-				<img id="thumbnil" style="display:none" src="" alt="image"/>
+			<ul class="form-style-1">
+				<li>
+					<label>ALBUM IZENBURUA: <span class="required">*</span></label>
+					<input type="text" name="IZENBURUA" id="izenburua" class="field-long" required/>
+				</li>
+				<li>
+					<label>ALBUM DESKRIBAPENA: <span class="required">*</span></label>
+					<textarea id="deskribapena" name="deskribapena" style='width:100%;resize:none' required></textarea>
+				</li>			
+				<li>
+					<input type="submit" value="GEHITU ALBUMA" />
+					<?php
+						if ($_SERVER["REQUEST_METHOD"] == "POST"){
+							$nick = $_SESSION['login_nick'];
+							$izenburua = $_POST['IZENBURUA'];
+							$deskribapena = $_POST['deskribapena'];
+							include 'php/erab/albumGehitu.php';
+						}
+					?>
+				</li>
+			</ul>
+		</form>
 	</section>
 	
 </div>

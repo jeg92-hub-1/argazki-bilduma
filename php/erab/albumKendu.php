@@ -1,4 +1,5 @@
 <?php
+include 'php/konexioa.php';
 if(strcmp($izenburua,'-')==0){
 	echo "<p id='mezua' style='color:red'>Aukeratu album bat</p>";
 }else{

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
 	<title>ARGAZKI BILDUMA</title>
  
@@ -10,7 +10,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-    <script type="text/javascript" src="js/settingPhotos.js"></script>
+    <script type="text/javascript" src="js/settingAlbums.js"></script>
 	<?php
 		include 'php/sesioa.php';
 		if(!isset($_SESSION['login_email']))
@@ -19,7 +19,7 @@
 	?>
 	
 </head>
-<body>
+<body onload="datuakKargatu()">
 <div id="container">
 		<div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
@@ -35,27 +35,23 @@
 					<ul class="form-style-1">
 						<li>
 							<label>ALBUM IZENA: <span class="required">*</span></label>
-							<input type="text" name="ETIKETA" id="etiketa" class="field-long" required/></li>
+							<select name="combobox_album"  id="cb_album" class="field-select" required onchange="erakutsiDeskribapena(this)">
 							</select>
 						</li>
 						<li>
 							<label>DESKRIBAPENA: <span class="required">*</span></label>
-							<input type="text" name="ETIKETA" id="etiketa" class="field-long" required/></li>
-							</select>
+							<textarea id="deskribapena" name="deskribapena" style='width:100%;height:100px;resize:none' required></textarea>
 						</li>
 						<li>
-							<input type="submit" value="EZABATU IRUDIA" />
+							<input type="submit" value="EDITATU" />
 							<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								include 'php/erab/irudiaAldatu.php';
+								include 'php/erab/albumAldatu.php';
 							}
 							?>
 						</li>
 					</ul>
-		</form>
-					<div id="irudiaIkusi">
-					</div>
-					
+		</form>					
 	</section>
 	
 </div>

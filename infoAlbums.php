@@ -29,7 +29,7 @@
 		<ul class="form-style-1">
 			<li>
 				<label>ALBUMAK: </label>
-				<select name="combobox_album"  id="cb_album" class="field-select" onchange="deskribapenaErakutsi(this)">
+				<select name="combobox_album"  id="cb_album" class="field-select" onchange="bistaratuDeskribapenaEtaAlbuma(this)">
 					<?php include 'php/erab/cb_albumak.php';?>
 				</select>
 			</li>
