@@ -7,12 +7,8 @@
 	<link rel='stylesheet' type='text/css' href='css/reset.css'>
 	<link rel='stylesheet' type='text/css' href='css/main.css'>
 	<link rel='stylesheet' type='text/css' href='css/settingPhotos.css'>
-    
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-	<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-
-    <script type="text/javascript" src="js/settingPhotos.js"></script>
+ 
+    <script type="text/javascript" src="js/settingAlbums.js"></script>
 	<?php include 'php/sesioa.php' ?>
 	
 </head>
@@ -31,38 +27,24 @@
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
 					<ul class="form-style-1">
 						<li>
-							<label>ALBUMAK: <span class="required">*</span></label>
-							<select name="combobox_album"  id="cb_album" class="field-select" onchange="showValue($('#cb_album option:selected').text());">
-								<?php include 'php/erab/cb_albumak.php';?>
-							</select>
+							<label>ALBUM IZENBURUA: <span class="required">*</span></label>
+							<input type="text" name="IZENBURUA" id="izenburua" class="field-long" required/>
 						</li>
 						<li>
-							<label>EGOERA: <span class="required">*</span></label>
-							<select name="combobox_egoera"  id="cb_egoera" class="field-select">
-								<option value="PUB" selected="selected">PUBLIKOA</option>
-								<option value="PRI" >PRIBATUA</option>
-								<option value="MUG" >MUGATUA</option>
-							</select>
-							
+							<label>ALBUM DESKRIBAPENA: <span class="required">*</span></label>
+							<textarea id="deskribapena" name="deskribapena" style='width:100%;resize:none' required></textarea>
 						</li>
-						<li>
-							<label>ETIKETA: <span class="required">*</span></label>
-							<input type="text" name="ETIKETA" id="etiketa" class="field-long" /></li>
-						<li>
-							<label>IRUDIA: <span class="required">*</span></label>
-							<input type="file" name="irudiaIgo" onchange="showMyImage(this)" class="field-long" required/>
-						</li>
+
 						
 						<li>
-							<input type="submit" value="GEHITU IRUDIA" />
+							<input type="submit" value="GEHITU ALBUMA" />
 							<?php
-							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								$nick = $_SESSION['login_nick'];
-								$etiketa = $_POST['ETIKETA'];
-								$albumIzenburua = $_POST['combobox_album'];
-								$egoera=$_POST['combobox_egoera'];
-								include 'php/erab/irudiaGehitu.php';
-							}
+								if ($_SERVER["REQUEST_METHOD"] == "POST"){
+									$nick = $_SESSION['login_nick'];
+									$izenburua = $_POST['IZENBURUA'];
+									$deskribapena = $_POST['deskribapena'];
+									include 'php/erab/albumGehitu.php';
+								}
 							?>
 						</li>
 					</ul>

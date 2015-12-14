@@ -6,11 +6,9 @@
  
 	<link rel='stylesheet' type='text/css' href='css/reset.css'>
 	<link rel='stylesheet' type='text/css' href='css/main.css'>
+    <link rel='stylesheet' type='text/css' href='css/carouselPhotos.css'>
 	<link rel='stylesheet' type='text/css' href='css/settingAlbums.css'>
-    
-	<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-	<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+
 
     <script type="text/javascript" src="js/settingAlbums.js"></script>
 	<?php include 'php/sesioa.php' ?>
@@ -30,17 +28,20 @@
 	<section class="main">
 		<ul class="form-style-1">
 			<li>
-				<label>ALBUMAK: <span class="required">*</span></label>
+				<label>ALBUMAK: </label>
 				<select name="combobox_album"  id="cb_album" class="field-select" onchange="deskribapenaErakutsi(this)">
 					<?php include 'php/erab/cb_albumak.php';?>
 				</select>
 			</li>
 			<li>
-				<label>DESKRIBAPENA: <span class="required">*</span></label>
-				<textarea id="deskribapena" rows="4" cols="50">
+				<label>DESKRIBAPENA: </label>
+				<textarea id="deskribapena" disabled >
 				</textarea>
 		</ul>
+			<div id="carousel">
+			</div>
 	</section>
+
 	
 </div>
 </body>
