@@ -11,7 +11,7 @@
 	$albumid=$row['ALBUMID'];
 	
 	if(strcmp($etiketaZaharra,$etiketaBerria)==0){
-		echo "<p style='color:red'>Etiketa bera!</p>";
+		echo "<p id='mezua' style='color:red'>Etiketa bera!</p>";
 	}else{
 		$sql="SELECT COUNT(*) FROM ARGAZKIA WHERE NICK='$nick' AND ALBUMID='$albumid' AND ETIKETA='$etiketaBerria'";
 		$result = $dblink->query($sql);
@@ -21,12 +21,12 @@
 				$sql="UPDATE ARGAZKIA SET ETIKETA='$etiketaBerria' WHERE NICK='$nick' AND ALBUMID='$albumid' AND ETIKETA='$etiketaZaharra'";
 				$result = $dblink->query($sql);
 				if($result){
-					echo "<p style='color:green'>Aldatua</p>";
+					echo "<p id='mezua' style='color:green'>Aldatua</p>";
 				}else{
-					echo "<p style='color:red'>Errorea aldatzerakoan</p>";
+					echo "<p id='mezua' style='color:red'>Errorea aldatzerakoan</p>";
 				}
 		}else{
-			echo "<p style='color:red'>Etiketa existitzen da</p>";
+			echo "<p id='mezua' style='color:red'>Etiketa existitzen da</p>";
 		}
 	}
 

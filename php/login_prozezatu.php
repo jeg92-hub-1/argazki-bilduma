@@ -20,13 +20,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$row = $result->fetch_array(MYSQLI_BOTH);
 
 	if($result){
-		$_SESSION['login_email']=$row['EMAIL'];
-		$_SESSION['login_nick']=$row['NICK'];
-		$_SESSION['login_rol']=$row['ROLA'];
-		
-		header('Location: ./');
-		
+		if(strcmp($row[0],'')==0){
+			echo "<h3 id='mezua' style='color:red'>Datu okerrak!</h3>";
+		}else{
+			$_SESSION['login_email']=$row['EMAIL'];
+			$_SESSION['login_nick']=$row['NICK'];
+			$_SESSION['login_rol']=$row['ROLA'];
+			header('Location: ./');
+		}
+	}else{
+		echo "<p id='mezua' style='color:red'>Errorea </p>";
 	}
+	
 
 
 require 'deskonexioa.php';

@@ -28,7 +28,7 @@ if(strcmp($egoera,"carouselakin")==0){
 	if(strcmp($deskribapena,'')==0){
 		$erantzuna = "Ez dago deskribapenik";
 	}else{
-		$erantzuna = $deskribapena . $egoera ."\n\n" . $argazkiKop;
+		$erantzuna = $deskribapena ."\n\n" . $argazkiKop;
 	}
 
 

@@ -5,7 +5,7 @@
 	EMAIL='$email' WHERE NICK='$nick';";
 	
 	$result=$dblink->query($sql);
-	$mezua = "<h3 style='";
+	$mezua = "<h3 id='mezua' style='";
 	if($result){
 		 $mezua  = $mezua  . "color:green;'>EGUNERATUA</h3>";
 	}else{

@@ -13,13 +13,13 @@
 		$sql="INSERT INTO ALBUMA VALUES('$nick',$albumid,'$izenburua','$deskribapena')";
 		$result = $dblink->query($sql);
 		if($result){
-			echo "<p style='color:green'>Ondo gorde da</p>";
+			echo "<p id='mezua' style='color:green'>Ondo gorde da</p>";
 		}else{
-			echo "<p style='color:red'>Errorrea igotzerakoan</p>";
+			echo "<p id='mezua' style='color:red'>Errorrea igotzerakoan</p>";
 		}
 		
 	}else{
-		echo "<p style='color:red'>Albuma existitzen da!</p>";
+		echo "<p id='mezua' style='color:red'>Albuma existitzen da!</p>";
 	}
 
 ?>

@@ -37,8 +37,7 @@ function erakutsiDeskribapena(izenburua){
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("deskribapena").innerHTML="";
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
-			document.getElementById("deskribapena").innerHTML= XMLHttpRequestObject.responseText;
-			
+			document.getElementById("deskribapena").innerHTML= XMLHttpRequestObject.responseText;	
 		}
 	}
 	XMLHttpRequestObject.open("GET","./php/erakutsiDeskribapenaEtaAlbuma.php?IZENBURUA="+izenburua.value+"&EGOERA=carouselgabe", true);

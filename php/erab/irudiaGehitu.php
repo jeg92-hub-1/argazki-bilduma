@@ -18,9 +18,9 @@ if($_FILES["irudiaIgo"]["size"] != 0){
 		$sql2="INSERT INTO ARGAZKIA VALUES('".$nick."',$albumid,$argazkiid,'".$etiketa."','".$data."','".$egoera."')";
 		$result2 = $dblink->query($sql2);
 		if($result2){
-			echo "<p style='color:green'>Igota</p>";
+			echo "<p id='mezua' style='color:green'>Igota</p>";
 		}else{
-			echo "<p style='color:red'>Errorea Igotzerakoan</p>";
+			echo "<p id='mezua' style='color:red'>Errorea Igotzerakoan</p>";
 		}
 	}
 	else {

@@ -10,9 +10,9 @@ $albumid=$row['ALBUMID'];
 $sql="DELETE FROM ARGAZKIA WHERE NICK='$nick' AND ALBUMID='$albumid' AND ETIKETA='$etiketa'";
 $result = $dblink->query($sql);
 if($result){
-	echo "<p style='color:green'>Ezabatua</p>";
+	echo "<p id='mezua' style='color:green'>Ezabatua</p>";
 }else{
-	echo "<p style='color:red'>Errorea Ezabatzerakoan</p>";
+	echo "<p id='mezua' style='color:red'>Errorea Ezabatzerakoan</p>";
 }
 include_once "php/deskonexioa.php";
 ?>

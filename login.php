@@ -3,7 +3,7 @@
 include "php/sesioa.php";
 
 ?>
-<html lang="en">
+<html>
 <head>
 	<title>ARGAZKI BILDUMA</title>
 
@@ -45,6 +45,10 @@ include "php/sesioa.php";
 		</div>
 		</center>
 	</section><!-- end main -->
+	<script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+			<script type='text/javascript'>
+				$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+			</script>	
 </div>
 </body>
 </html>
