@@ -10,14 +10,9 @@
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-		<script type="text/javascript" src="js/settingAlbums.js"></script>
-		<?php
-			include 'php/sesioa.php';
-			if(!isset($_SESSION['login_email']))
-				header('Location: ./');
-		
-		?>
-		
+		<script type="text/javascript" src="js/settingUsers.js"></script>
+
+			<?php include 'php/sesioa.php' ?>
 	</head>
 	<body onload="datuakKargatu()">
 		<div id="container">
@@ -33,17 +28,16 @@
 				<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" enctype="multipart/form-data">
 					<ul class="form-style-1">
 						<li>
-							<label>ALBUMAK: <span class="required">*</span></label>
-							<select name="combobox_album"  id="cb_album" class="field-select" required>
+							<label>ERABILTZAILEAK: <span class="required">*</span></label>
+							<select name="combobox_user"  id="cb_user" class="field-select" required>
 							</select>
 						</li>
 						<li>
-							<input type="submit" value="ALBUMA EZABATU" />
+							<input type="submit" value="ERABILTZAILEA EZABATU" />
 								<?php
 									if ($_SERVER["REQUEST_METHOD"] == "POST"){
-										$nick = $_SESSION['login_nick'];
-										$izenburua = $_POST['combobox_album'];
-										include 'php/erab/albumKendu.php';
+										$nick = $_POST['combobox_user'];
+										include 'php/admin/erabiltzaileaKendu.php';
 									}
 								?>
 						</li>

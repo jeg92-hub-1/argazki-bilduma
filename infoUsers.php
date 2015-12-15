@@ -26,7 +26,7 @@
 		<center>
 			<div class="info-user-card">
 				<label>ERABILTZAILEA: </label>
-				<select name="combobox_album"  id="cb_album" class="field-select" onchange="bistaratuErabiltzaileInfo(this)">
+				<select name="combobox_user"  id="cb_user" class="field-select" onchange="bistaratuErabiltzaileInfo(this)">
 					<?php include 'php/admin/cb_nickak.php';?>
 				</select>
 				<form>

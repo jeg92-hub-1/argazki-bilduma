@@ -19,3 +19,14 @@ function bistaratuErabiltzaileInfo(nick){
 	XMLHttpRequestObject.open("GET","./php/erakutsiErabiltzaileInfo.php?NICK="+nick.value+"&EGOERA=carouselakin", true);
 	XMLHttpRequestObject.send();
 }
+
+function datuakKargatu(){
+	XMLHttpRequestObject.onreadystatechange = function(){
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+			document.getElementById('cb_user').innerHTML = XMLHttpRequestObject.responseText;
+
+		}
+	}
+	XMLHttpRequestObject.open("GET","./php/cb_erabiltzaileaKargatu.php", true);
+	XMLHttpRequestObject.send();
+}

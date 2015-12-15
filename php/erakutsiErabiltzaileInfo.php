@@ -17,6 +17,4 @@ if($result){
 	echo $erantzuna;
 }
 
-
-
 ?>
