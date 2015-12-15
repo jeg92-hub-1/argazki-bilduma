@@ -54,6 +54,10 @@
 	</form>
 
 	</section><!-- end main -->
+		<script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+			<script type='text/javascript'>
+				$(document).ready( function() {$('#msg').delay(2000).fadeOut();});
+			</script>	
 </div>
 </body>
 </html>

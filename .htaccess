@@ -17,4 +17,5 @@ RewriteRule ^infoAlbums$ infoAlbums.php [L]
 RewriteRule ^addAlbums$ addAlbums.php [L]
 RewriteRule ^editAlbums$ editAlbums.php [L]
 RewriteRule ^removeAlbums$ removeAlbums.php [L]
-
+RewriteRule ^infoUsers$ infoUsers.php [L]
+RewriteRule ^removeUsers$ removeUsers.php [L]

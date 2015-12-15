@@ -37,7 +37,7 @@ include "php/sesioa.php";
 				<input type="submit" name="login" class="login login-submit" value="LOGIN">
 			</form>
 			<div class="login-help">
-				<a href="register.php">Erregistratu</a> | <a href="forgotPassword.php">Pasahitza ahaztu duzu</a>
+				<a href="register">Erregistratu</a>
 			</div>
 			<?php
 				include 'php/login_prozezatu.php';

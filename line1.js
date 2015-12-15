@@ -43,7 +43,7 @@ function h2d(h)
  return parseInt(h,16);
 }
 
-function line_graph(){
+function line1_graph(){
  this.ct = 0;
  
  this.data      = new Array();
@@ -114,7 +114,7 @@ function line_graph(){
 
        if(i >= 1)
          {
-          jg.setColor(color);
+          jg.setColor("green");
           jg.drawLine(oldx, h-oldy, sx, h-ht1);
 		}
 

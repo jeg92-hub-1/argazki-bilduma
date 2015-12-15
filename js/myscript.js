@@ -59,6 +59,7 @@ function lehenengoPasahitzaBalidatu(pasahitza){
 	XMLHttpRequestObject.send();
 }
 
+/*Ea bi pasahitzak berdinak diren*/
 function pasahitzakBalidatu(pasahitza,pasahitza1){
 	document.getElementById("mezua").innerHTML="";
 	if(pasahitza == pasahitza1){

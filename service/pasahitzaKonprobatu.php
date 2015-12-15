@@ -24,7 +24,7 @@ if(strcmp($result1,"ERREXEGIA")==0)
 else{
 	$result1 = $client->call('pasahitzaKonprobatu', array('pass'=>$pass));
 	if(strcmp($result1,"ERABILITA")==0)
-		$erantzuna  =  $erantzuna . "color:red;'>ERABILITA</h3>&G";
+		$erantzuna  =  $erantzuna . "color:red;'>Ez da segurua</h3>&G";
 	else
 		$erantzuna  =  $erantzuna . "color:green;'>EGOKIA</h3>&O";
 }

@@ -8,10 +8,10 @@ function mainMenua(){
 	if(isset($_SESSION['login_email']) && isset($_SESSION['login_rol'])){
 		if($_SESSION['login_rol']=="ADMIN"){
 			//Administratzailearen  menua
-			echo "<li><a href='#' >ERABILTZAILEA <img src='images/settings.ico'/></a>";
+			echo "<li><a href='#' >ERABILTZAILEAK <img src='images/settings.ico'/></a>";
 			echo "<ul>";
-				echo "<li><a href='#'>ERABILTZAILE <img src='images/remove.ico'/> </a></li>";
-				echo "<li><a href='editAlbums'>ADMIN <img src='images/add.ico'/></a></li>";
+				echo "<li><a href='infoUsers'>ERABILTZAILEA <img src='images/info.ico'/></a></li>";
+				echo "<li><a href='removeUsers'>ERABILTZAILEA <img src='images/remove.ico'/> </a></li>";
 			echo "</ul>";
 			echo "</li>";
 			
