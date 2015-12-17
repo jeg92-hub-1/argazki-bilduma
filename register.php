@@ -10,7 +10,11 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/myscript.js"></script>
-	<?php include 'php/sesioa.php';?>
+	<?php
+		include 'php/sesioa.php';
+		if(isset($_SESSION['login_email']) || isset($_SESSION['login_rol']))
+			header('Location: ./');
+	?>
 	
 </head>
 <body>

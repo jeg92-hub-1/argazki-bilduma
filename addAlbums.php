@@ -9,7 +9,10 @@
 		<link rel='stylesheet' type='text/css' href='css/settingPhotos.css'>
 	 
 		<script type="text/javascript" src="js/settingAlbums.js"></script>
-		<?php include 'php/sesioa.php' ?>
+		<?php include 'php/sesioa.php';
+			if(!isset($_SESSION['login_email']) || $_SESSION['login_rol']!='USER')
+				header('Location: ./');
+		?>
 		
 	</head>
 	<body>

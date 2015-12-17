@@ -45,6 +45,17 @@ function erakutsiDeskribapena(izenburua){
 
 
 /*Admin-entzako funtzioak*/
+function datuakKargatu(egoera){
+	XMLHttpRequestObject.onreadystatechange = function(){
+		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+			document.getElementById('cb_user').innerHTML = XMLHttpRequestObject.responseText;
+
+		}
+	}
+	XMLHttpRequestObject.open("GET","./php/cb_erabiltzaileaKargatu.php?EGOERA="+egoera, true);
+	XMLHttpRequestObject.send();
+}
+
 function erakutsiAlbumak(nick){
 		
 	XMLHttpRequestObject.onreadystatechange = function(){
@@ -59,6 +70,7 @@ function erakutsiAlbumak(nick){
 	XMLHttpRequestObject.open("GET","./php/cb_albumKargatu.php?NICK="+nick.value, true);
 	XMLHttpRequestObject.send();
 }
+
 
 function bistaratuErabiltzailearenDatuak(izenburua,nick){
 	

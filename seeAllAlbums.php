@@ -3,18 +3,19 @@
 <html>
 <head>
 	<title>ARGAZKI BILDUMA</title>
- 
 	<link rel='stylesheet' type='text/css' href='css/reset.css'>
 	<link rel='stylesheet' type='text/css' href='css/main.css'>
     <link rel='stylesheet' type='text/css' href='css/carouselPhotos.css'>
 	<link rel='stylesheet' type='text/css' href='css/settingAlbums.css'>
-
-
     <script type="text/javascript" src="js/settingAlbums.js"></script>
-	<?php include 'php/sesioa.php' ?>
+	<?php
+		include 'php/sesioa.php';
+		if(!isset($_SESSION['login_email']) || $_SESSION['login_rol']!='ADMIN')
+			header('Location: ./');
+	?>
 	
 </head>
-<body>
+<body onload="datuakKargatu('a')">
 <div id="container">
 <div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
@@ -30,7 +31,6 @@
 			<li>
 				<label>ERABILTZAILEAK: </label>
 				<select name="combobox_user"  id="cb_user" class="field-select" onchange="erakutsiAlbumak(this)">
-					<?php include 'php/admin/cb_nickak.php';?>
 				</select>
 				<label>ALBUMAK: </label>
 				<select name="combobox_album"  id="cb_album" class="field-select" onchange=" bistaratuErabiltzailearenDatuak(this,cb_user.value)">

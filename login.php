@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<?php
-include "php/sesioa.php";
 
-?>
 <html>
 <head>
 	<title>ARGAZKI BILDUMA</title>
@@ -13,7 +10,11 @@ include "php/sesioa.php";
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 	
-	
+	<?php
+		include 'php/sesioa.php';
+		if(isset($_SESSION['login_email']) || isset($_SESSION['login_rol']))
+			header('Location: ./');
+	?>
 </head>
 <body>
 <div id="container">

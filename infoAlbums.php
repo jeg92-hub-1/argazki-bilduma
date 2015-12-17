@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
 	<title>ARGAZKI BILDUMA</title>
  
@@ -11,7 +11,11 @@
 
 
     <script type="text/javascript" src="js/settingAlbums.js"></script>
-	<?php include 'php/sesioa.php' ?>
+	<?php
+		include 'php/sesioa.php';
+		if(!isset($_SESSION['login_email']) || $_SESSION['login_rol']!='USER')
+			header('Location: ./');
+	?>
 	
 </head>
 <body>

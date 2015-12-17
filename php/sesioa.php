@@ -19,15 +19,15 @@ function mainMenua(){
 			
 			echo "<li><a href='#'>ALBUMAK <img src='images/settings.ico'/></a>";
 			echo "<ul>";
-				echo "<li><a href='seeAllAlbums'> ALBUM GUZTIAK <img src='images/xeyes.ico'/></a></li>";
-				echo "<li><a href='editAlbums'>ALBUMAK  <img src='images/remove.ico'/></a></li>";
+				echo "<li><a href='seeAllAlbums'>ALBUM GUZTIAK <img src='images/xeyes.ico'/></a></li>";
+				echo "<li><a href='removeAllPhotos'>ALBUMAK <img src='images/remove.ico'/></a></li>";
 			echo "</ul>";
 			echo "</li>";
 		}else{
 			//Erabiltzailearen menua
 			echo "<li><a href='#'>NIRE ARGAZKIAK <img src='images/settings.ico'/></a>";
 			echo "<ul>";
-				echo "<li><a href='myAllPhotos'>ARGAZKIAK <img src='images/xeyes.ico'/></a></li>";
+				echo "<li><a href='seePhotosByStatus'>ARGAZKIAK <img src='images/xeyes.ico'/></a></li>";
 				echo "<li><a href='addPhotos'>ARGAZKIAK <img src='images/add.ico'/> </a></li>";				
 				echo "<li><a href='removePhotos'>ARGAZKIAK <img src='images/remove.ico'/> </a></li>";
 				echo "<li><a href='editPhotos'>ARGAZKIAK <img src='images/pen.ico'/></a></li>";

@@ -27,6 +27,9 @@ function erakutsiArgazkiak(albumizenburu){
 		document.getElementById("cb_argazkiak").innerHTML="";
 		
 		document.getElementById("irudiaIkusi").innerHTML="";
+		document.getElementById('PUB').checked=false;
+		document.getElementById('PRI').checked=false;
+		document.getElementById('MUG').checked=false;
 		//alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById("cb_argazkiak").innerHTML=XMLHttpRequestObject.responseText;
@@ -37,16 +40,28 @@ function erakutsiArgazkiak(albumizenburu){
 	
 }
 function argazkiaBistaratu(albumizenburu,etiketa){
-	XMLHttpRequestObject.onreadystatechange = function(){
+	if(etiketa !='-'){
+			XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("irudiaIkusi").innerHTML="";
-		//alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
+
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
-			document.getElementById("irudiaIkusi").innerHTML=XMLHttpRequestObject.responseText;
+			var string=XMLHttpRequestObject.responseText;
+			var array=string.split('&');
+			document.getElementById('irudiaIkusi').innerHTML=array[0];
+			document.getElementById(array[1]).checked = true;
 			document.getElementById("etiketa").value=etiketa;
 		}
 	}
 	XMLHttpRequestObject.open("GET","./php/erakutsiArgazkia.php?albumIzenburua="+albumizenburu+"&etiketa="+etiketa, true);
 	XMLHttpRequestObject.send();
+	}else{
+		document.getElementById("irudiaIkusi").innerHTML="";
+		document.getElementById("etiketa").value="";
+		document.getElementById('PUB').checked=false;
+		document.getElementById('PRI').checked=false;
+		document.getElementById('MUG').checked=false;	
+	}
+
 	
 }
 function erakutsiNireArgazkiak(egoera){

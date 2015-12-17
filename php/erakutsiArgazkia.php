@@ -13,6 +13,6 @@ $albumid =$row[0];
 $sql="SELECT * FROM ARGAZKIA WHERE NICK='$nick' AND ALBUMID='$albumid' AND ETIKETA='$etiketa'";
 $result = $dblink->query($sql);
 $row = $result->fetch_array(MYSQLI_BOTH);
-echo "<img id='thumbnil' src='data:image/jpeg;base64," .base64_encode($row['IMG'])."' />";
+echo "<img id='thumbnil' src='data:image/jpeg;base64," .base64_encode($row['IMG'])."' />&". $row['EGOERA'];
 
 ?>

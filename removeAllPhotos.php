@@ -13,7 +13,7 @@
     <script type="text/javascript" src="js/settingPhotos.js"></script>
 	<?php
 		include 'php/sesioa.php';
-		if(!isset($_SESSION['login_email']) || $_SESSION['login_rol']!='USER')
+		if(!isset($_SESSION['login_email']) || $_SESSION['login_rol']!='ADMIN')
 			header('Location: ./');
 	
 	?>

@@ -9,7 +9,11 @@
 		<link rel="stylesheet" type="text/css" href="css/carouselPhotos.css">
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
-		<?php include 'php/sesioa.php'?>
+		<?php
+			include 'php/sesioa.php';
+			if(!isset($_SESSION['login_email']))
+				header('Location: ./');
+		?>
 		
 	</head>
 	<body>

@@ -8,7 +8,11 @@
 	<link rel='stylesheet' type='text/css' href='css/main.css'>
 	<link rel="stylesheet" type="text/css" href="css/settingUsers.css">
     <script type="text/javascript" src="js/settingUsers.js"></script>
-	<?php include 'php/sesioa.php' ?>
+	<?php
+		include 'php/sesioa.php';
+		if(!isset($_SESSION['login_email']) || $_SESSION['login_rol']!='ADMIN')
+			header('Location: ./');
+	?>
 	
 </head>
 <body onload="datuakKargatu('b')">
