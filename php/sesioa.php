@@ -12,13 +12,14 @@ function mainMenua(){
 			echo "<ul>";
 				echo "<li><a href='infoUsers'>ERABILTZAILEA <img src='images/info.ico'/></a></li>";
 				echo "<li><a href='removeUsers'>ERABILTZAILEA <img src='images/remove.ico'/> </a></li>";
+				echo "<li><a href='validUsers'>ERABILTZAILEA <img src='images/valid.ico'/> </a></li>";
 			echo "</ul>";
 			echo "</li>";
 			
 			echo "<li><a href='#'>ALBUMAK <img src='images/settings.ico'/></a>";
 			echo "<ul>";
-				echo "<li><a href='seeAllAlbum'> ALBUM GUZTIAK <img src='images/xeyes.ico'/></a></li>";
-				echo "<li><a href='editAlbums'>ALBUMAK  <img src='images/pen.ico'/></a></li>";
+				echo "<li><a href='seeAllAlbums'> ALBUM GUZTIAK <img src='images/xeyes.ico'/></a></li>";
+				echo "<li><a href='editAlbums'>ALBUMAK  <img src='images/remove.ico'/></a></li>";
 			echo "</ul>";
 			echo "</li>";
 		}else{

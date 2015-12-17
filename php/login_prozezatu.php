@@ -23,10 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(strcmp($row[0],'')==0){
 			echo "<h3 id='mezua' style='color:red'>Datu okerrak!</h3>";
 		}else{
-			$_SESSION['login_email']=$row['EMAIL'];
-			$_SESSION['login_nick']=$row['NICK'];
-			$_SESSION['login_rol']=$row['ROLA'];
-			header('Location: ./');
+			if($row['ISVALID']==1){
+				$_SESSION['login_email']=$row['EMAIL'];
+				$_SESSION['login_nick']=$row['NICK'];
+				$_SESSION['login_rol']=$row['ROLA'];
+				header('Location: ./');
+			}else{
+				echo "<h3 id='mezua' style='color:red'>Itxaron balidatu arte!</h3>";
+			}
 		}
 	}else{
 		echo "<p id='mezua' style='color:red'>Errorea </p>";

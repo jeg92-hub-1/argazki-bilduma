@@ -1,7 +1,12 @@
 <?php
 	include 'konexioaAJAX.php';
-	session_start();
-	$nick=$_SESSION['login_nick'];
+	if(isset($_GET['NICK'])){
+		$nick = $_GET['NICK'];
+	}else{
+			session_start();
+			$nick=$_SESSION['login_nick'];
+	}
+
 	$sql="SELECT * FROM ALBUMA WHERE NICK='$nick'";
 	$result=$dblink->query($sql);
 	

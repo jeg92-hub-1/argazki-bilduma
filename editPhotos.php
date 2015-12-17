@@ -50,7 +50,7 @@
 							</select>
 						</li>
 						<li>
-							<input type="submit" value="EZABATU IRUDIA" />
+							<input type="submit" value="EDITATU IRUDIA" />
 							<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
 								include 'php/erab/irudiaAldatu.php';
@@ -63,6 +63,10 @@
 					</div>
 					
 	</section>
+				<script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+			<script type='text/javascript'>
+				$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+			</script>	
 	
 </div>
 </body>

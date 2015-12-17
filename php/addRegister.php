@@ -6,8 +6,8 @@ $izena = $_POST['IZENA'];
 $abizenak = $_POST['ABIZENAK'];
 $pasahitza = $_POST['PASAHITZA'];
 $email = $_POST['EMAIL'];
-$sql="INSERT INTO ERABILTZAILEA(NICK,IZENA,ABIZENAK,PASAHITZA,EMAIL,ROLA)
-		VALUES ('{$nick}','{$izena}','{$abizenak}','{$pasahitza}','{$email}','USER')";
+$sql="INSERT INTO ERABILTZAILEA(NICK,IZENA,ABIZENAK,PASAHITZA,EMAIL,ROLA,ISVALID)
+		VALUES ('{$nick}','{$izena}','{$abizenak}','{$pasahitza}','{$email}','USER',0)";
 
 // SQL exekutatu 
 $result = $dblink->query($sql);
