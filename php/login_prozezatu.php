@@ -21,7 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if(strcmp($row[0],'')==0){
 			echo "<h3 id='mezua' style='color:red'>Datu okerrak!</h3>";
 		}else{
-			if($row['ISVALID']==1){
+			if($row['ISBLOCK']==0){
+				echo "<h3 id='mezua' style='color:red'>Blokeatuta!</h3>";
+			}else if($row['ISVALID']==0){
 				$_SESSION['login_email']=$row['EMAIL'];
 				$_SESSION['login_nick']=$row['NICK'];
 				$_SESSION['login_rol']=$row['ROLA'];

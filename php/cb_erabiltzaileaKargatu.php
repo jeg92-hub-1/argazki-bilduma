@@ -1,6 +1,16 @@
 <?php
 	include 'konexioaAJAX.php';
-	$sql="SELECT NICK FROM ERABILTZAILEA;";
+	$egoera = $_GET['EGOERA'];
+	if(strcmp($egoera,'a')==0){
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ROLA='USER';";
+	}else if(strcmp($egoera,'v')==0){
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ISVALID=1 AND ROLA='USER';";
+	}else if(strcmp($egoera,'b')==0){
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ISBLOCK=0 AND ROLA='USER';";
+	}else if(strcmp($egoera,'ub')==0){
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ISBLOCK=1 AND ROLA='USER';";
+	}
+
 	$result = $dblink->query($sql);
 	$kont =0;
 	echo "<option value='-'>".'- - - - -'."</option>";

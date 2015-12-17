@@ -1,7 +1,7 @@
 <?php
 include_once 'php/konexioa.php';
-
-$sql="SELECT PASAHITZA FROM ERABILTZAILEA WHERE NICK='$nick'";
+$nick = $_POST['NICK'];
+$sql="SELECT * FROM ERABILTZAILEA WHERE NICK='$nick'";
 $result = $dblink->query($sql);
 $row = $result->fetch_array(MYSQLI_BOTH);
 $pasahitza=$row['PASAHITZA'];

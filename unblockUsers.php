@@ -11,7 +11,7 @@
 	<?php include 'php/sesioa.php' ?>
 	
 </head>
-<body onload="datuakKargatu('ub')">
+<body onload="datuakKargatu('b')">
 <div id="container">
 <div class="logo">
 			<p><h1>ARGAZKI BILDUMA</h1></p>
@@ -34,11 +34,11 @@
 					<p>IZENA:</p> <input type="text" name="IZENA" id="izena"  autocomplete="off" tabindex="2" class="txtinput" required   readonly="readonly" >
 					<p>ABIZENAK:</p><input type="text" name="ABIZENAK" id="abizenak" autocomplete="off" tabindex="3" class="txtinput" required   readonly="readonly" >
 					<p>EPOSTA:</p><input type="text" name="EMAIL" id="email" autocomplete="off" tabindex="4" class="txtinput" required   readonly="readonly"  >
-					<input type="submit" id="submitbtn" class="info-user info-user-submit" name="submit"  value="BLOKEATU" disabled="disabled"/>
+					<input type="submit" id="submitbtn" class="info-user info-user-submit" name="submit"  value="DESBLOKEATU" disabled="disabled"/>
 					<div id="mezua" >
 						<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								include "php/admin/erabiltzaileaBlokeatu.php";
+								include "php/admin/erabiltzaileaDesblokeatu.php";
 							}
 						?>
 					</div>
