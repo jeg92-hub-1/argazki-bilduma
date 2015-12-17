@@ -33,7 +33,7 @@
 					<?php include 'php/admin/cb_nickak.php';?>
 				</select>
 				<label>ALBUMAK: </label>
-				<select name="combobox_album"  id="cb_album" class="field-select" onchange=" bistaratuDeskribapenaEtaAlbuma(this,cb_user.value)">
+				<select name="combobox_album"  id="cb_album" class="field-select" onchange=" bistaratuErabiltzailearenDatuak(this,cb_user.value)">
 				</select>
 			</li>
 			<li>

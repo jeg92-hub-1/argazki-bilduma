@@ -60,7 +60,7 @@ function erakutsiAlbumak(nick){
 	XMLHttpRequestObject.send();
 }
 
-function bistaratuDeskribapenaEtaAlbuma(izenburua,nick){
+function bistaratuErabiltzailearenDatuak(izenburua,nick){
 	
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("deskribapena").innerHTML="";

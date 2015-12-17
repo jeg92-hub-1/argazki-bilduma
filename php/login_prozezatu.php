@@ -11,8 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if(!preg_match($regex,$nick_email)){
 		$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE NICK='". $nick_email ."' AND PASAHITZA='" . $password  . "';";
 	}else{
-		echo $nick_email;
-		echo $password;
 		$erabiltzaileak = "SELECT * FROM ERABILTZAILEA WHERE EMAIL='". $nick_email ."' AND PASAHITZA='" . $password  . "';";
 	}
 

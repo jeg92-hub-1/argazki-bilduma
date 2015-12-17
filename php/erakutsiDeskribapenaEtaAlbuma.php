@@ -1,15 +1,16 @@
 <?php
 require_once 'konexioaAJAX.php';
+
+
 if(isset($_GET['NICK'])){
 	$nick = $_GET['NICK'];
 }else{
 	session_start();
-	$nick=$_SESSION['login_nick'];
+	$nick = $_SESSION['login_nick'];
 }
 
 $izenburua=$_GET['IZENBURUA'];
 $egoera=$_GET['EGOERA'];
-
 
 /*Deskribapena eta albumida lortzeko sententzia*/
 $sql="SELECT DESKRIBAPENA,ALBUMID FROM ALBUMA WHERE NICK='$nick' AND IZENBURUA='$izenburua'";

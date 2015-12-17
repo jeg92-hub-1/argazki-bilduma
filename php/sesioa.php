@@ -13,6 +13,7 @@ function mainMenua(){
 				echo "<li><a href='infoUsers'>ERABILTZAILEA <img src='images/info.ico'/></a></li>";
 				echo "<li><a href='removeUsers'>ERABILTZAILEA <img src='images/remove.ico'/> </a></li>";
 				echo "<li><a href='validUsers'>ERABILTZAILEA <img src='images/valid.ico'/> </a></li>";
+				echo "<li><a href='blockUsers'>ERABILTZAILEA <img src='images/block.ico'/> </a></li>";
 			echo "</ul>";
 			echo "</li>";
 			
