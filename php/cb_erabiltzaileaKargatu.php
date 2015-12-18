@@ -2,13 +2,13 @@
 	include 'konexioaAJAX.php';
 	$egoera = $_GET['EGOERA'];
 	if(strcmp($egoera,'a')==0){
-		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ROLA='USER';";
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE NICK!='default'AND ROLA='USER';";
 	}else if(strcmp($egoera,'v')==0){
-		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ISVALID=1 AND ROLA='USER';";
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE NICK!='default' AND ISVALID=1 AND ROLA='USER';";
 	}else if(strcmp($egoera,'b')==0){
-		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ISBLOCK=0 AND ROLA='USER';";
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE NICK!='default' AND ISBLOCK=0 AND ROLA='USER';";
 	}else if(strcmp($egoera,'ub')==0){
-		$sql="SELECT NICK FROM ERABILTZAILEA WHERE ISBLOCK=1 AND ROLA='USER';";
+		$sql="SELECT NICK FROM ERABILTZAILEA WHERE NICK!='default' AND ISBLOCK=1 AND ROLA='USER';";
 	}
 
 	$result = $dblink->query($sql);

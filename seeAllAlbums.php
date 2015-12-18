@@ -40,6 +40,7 @@
 				<label>DESKRIBAPENA: </label>
 				<textarea id="deskribapena" disabled >
 				</textarea>
+			</li>
 		</ul>
 			<div id="carousel">
 			</div>

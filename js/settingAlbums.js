@@ -20,11 +20,10 @@ function bistaratuDeskribapenaEtaAlbuma(izenburua){
 	XMLHttpRequestObject.send();
 }
 
-function datuakKargatu(){
+function AlbumakKargatu(){
 	XMLHttpRequestObject.onreadystatechange = function(){
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById('cb_album').innerHTML = XMLHttpRequestObject.responseText;
-
 		}
 	}
 	XMLHttpRequestObject.open("GET","./php/cb_albumKargatu.php", true);
@@ -32,7 +31,6 @@ function datuakKargatu(){
 }
 
 function erakutsiDeskribapena(izenburua){
-	
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("deskribapena").innerHTML="";
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
@@ -60,8 +58,7 @@ function erakutsiAlbumak(nick){
 		
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("cb_album").innerHTML="";
-			document.getElementById("deskribapena").innerHTML="";
-		
+		document.getElementById("deskribapena").innerHTML="";
 		document.getElementById("carousel").innerHTML="";
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById("cb_album").innerHTML= XMLHttpRequestObject.responseText;	

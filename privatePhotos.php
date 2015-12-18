@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<title>ARGAZKI BILDUMA</title>
 
 		<link rel="stylesheet" type="text/css" href="css/reset.css">
-		<link rel="stylesheet" type="text/css" href="css/main.css">	
-		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/carouselPhotos.css">
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/settingPhotos.js"></script>
 		<?php
 			include 'php/sesioa.php';
 			if(!isset($_SESSION['login_email']))

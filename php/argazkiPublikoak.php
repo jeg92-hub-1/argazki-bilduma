@@ -1,6 +1,8 @@
 <?php
 require_once 'konexioa.php';
-$sql="SELECT * FROM ARGAZKIA WHERE EGOERA='PUB'";
+require 'lib/myfunctions.php';
+
+$sql="SELECT * FROM ARGAZKIA WHERE ALBUMID>0 AND EGOERA='PUB'";
 $result = $dblink->query($sql);
 $kont = 1;
 echo "<ul id='slider'>";
@@ -11,12 +13,22 @@ while( $row = $result->fetch_array(MYSQLI_BOTH)) {
 	echo "</li>";
 	$kont = $kont + 1;
 }
+$sql1="SELECT * FROM ARGAZKIA WHERE ALBUMID=0 AND EGOERA='PUB'";
+$result = $dblink->query($sql1);
+$row = $result->fetch_array(MYSQLI_BOTH);
+echo "<li>";
+		echo '<img alt="default" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="700" height="350" />';
+		echo "<p><span>PORTADA</span></p>";
+	echo "</li>";
+
 echo "</ul>";
 $result = $dblink->query($sql);
 $kont = 1;
 echo "<ul id='thumb'>";
 while( $row = $result->fetch_array(MYSQLI_BOTH)) {
-	echo '<li><a href="#'.$kont.'"><img alt="'.$row["ETIKETA"].'" onclick="bistaratuAlerta(this)" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="50" height="50" /></a></li>';
+	$testua=$row['NICK'] . '&' . $row['ALBUMID'] . '&' .$row["ETIKETA"];
+	$alt=encrypt($testua,'12');
+	echo '<li><a href="#'.$kont.'"><img alt="'.$alt.'" onclick="bisitaGehitu(this)" src="data:image/jpeg;base64,' . base64_encode($row['IMG']) . '" width="50" height="50" /></a></li>';
 	$kont = $kont + 1;
 		
 }
