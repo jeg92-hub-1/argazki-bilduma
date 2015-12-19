@@ -1,6 +1,6 @@
 Options +FollowSymLinks
 RewriteEngine on
-RewriteBase /argazkiBilduma/
+RewriteBase /argazki-bilduma/
 RewriteRule ^/$ index.php [L]
 RewriteRule ^logout$ logout.php [L]
 RewriteRule ^setUser$ setUser.php [L]
