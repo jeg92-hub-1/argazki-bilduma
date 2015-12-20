@@ -7,9 +7,6 @@
 		<link rel='stylesheet' type='text/css' href='css/reset.css'>
 		<link rel='stylesheet' type='text/css' href='css/main.css'>
 		<link rel='stylesheet' type='text/css' href='css/settingPhotos.css'>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
 		<script type="text/javascript" src="js/settingAlbums.js"></script>
 		<?php
 			include 'php/sesioa.php';
@@ -18,7 +15,7 @@
 		?>
 		
 	</head>
-	<body onload="datuakKargatu()">
+	<body onload="AlbumakKargatu()">
 		<div id="container">
 			<div class="logo">
 				<p><h1>ARGAZKI BILDUMA</h1></p>

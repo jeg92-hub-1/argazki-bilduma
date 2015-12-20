@@ -10,18 +10,29 @@ if($_FILES["irudiaIgo"]["size"] != 0){
 		$result = $dblink->query($sql);
 		$row = $result->fetch_array(MYSQLI_BOTH);
 		$albumid=$row['ALBUMID'];
-		$sql1="SELECT COUNT(*)AS KOPURUA FROM ARGAZKIA WHERE NICK='".$nick."' AND ALBUMID=".$albumid.";";
+		
+		$sql1="SELECT * FROM ARGAZKIA WHERE NICK='".$nick."' AND ALBUMID=".$albumid.";";
 		$result1 = $dblink->query($sql1);
 		$row = $result1->fetch_array(MYSQLI_BOTH);
-		$argazkiid = $row['KOPURUA'] + 1;
-		
-		$sql2="INSERT INTO ARGAZKIA VALUES('".$nick."',$albumid,$argazkiid,'".$etiketa."','".$data."','".$egoera."')";
-		$result2 = $dblink->query($sql2);
-		if($result2){
-			echo "<p id='mezua' style='color:green'>Igota</p>";
-		}else{
-			echo "<p id='mezua' style='color:red'>Errorea Igotzerakoan</p>";
+		$etiketaZaharra = $row['ETIKETA'];
+		if(strcmp($etiketaZaharra,$etiketa)==0){
+			echo "<p id='mezua' style='color:red'>Etiketa hori jada existitzen da.</p>";
+		}else{		
+			$sql1="SELECT COUNT(*)AS KOPURUA FROM ARGAZKIA WHERE NICK='".$nick."' AND ALBUMID=".$albumid.";";
+			$result1 = $dblink->query($sql1);
+			$row = $result1->fetch_array(MYSQLI_BOTH);
+			$argazkiid = $row['KOPURUA'] + 1;
+
+			
+			$sql2="INSERT INTO ARGAZKIA VALUES('".$nick."',$albumid,$argazkiid,'".$etiketa."','".$data."','".$egoera."',0,0)";
+			$result2 = $dblink->query($sql2);
+			if($result2){
+				echo "<p id='mezua' style='color:green'>Igota</p>";
+			}else{
+				echo "<p id='mezua' style='color:red'>Errorea Igotzerakoan</p>";
+			}
 		}
+
 	}
 	else {
 		echo "File is not an image.";

@@ -21,16 +21,14 @@ function showMyImage(fileInput) {
         }
 }
 
+/*removePhotos*/
 function erakutsiArgazkiak(albumizenburu){
 
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("cb_argazkiak").innerHTML="";
 		
 		document.getElementById("irudiaIkusi").innerHTML="";
-		document.getElementById('PUB').checked=false;
-		document.getElementById('PRI').checked=false;
-		document.getElementById('MUG').checked=false;
-		//alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
+
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById("cb_argazkiak").innerHTML=XMLHttpRequestObject.responseText;
 		}
@@ -41,19 +39,18 @@ function erakutsiArgazkiak(albumizenburu){
 }
 function argazkiaBistaratu(albumizenburu,etiketa){
 	if(etiketa !='-'){
-			XMLHttpRequestObject.onreadystatechange = function(){
-		document.getElementById("irudiaIkusi").innerHTML="";
-
-		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
-			var string=XMLHttpRequestObject.responseText;
-			var array=string.split('&');
-			document.getElementById('irudiaIkusi').innerHTML=array[0];
-			document.getElementById(array[1]).checked = true;
-			document.getElementById("etiketa").value=etiketa;
+		XMLHttpRequestObject.onreadystatechange = function(){
+			document.getElementById("irudiaIkusi").innerHTML="";
+			if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
+				var string=XMLHttpRequestObject.responseText;
+				var array=string.split('&');
+				document.getElementById('irudiaIkusi').innerHTML=array[0];
+				document.getElementById(array[1]).checked = true;
+				document.getElementById("etiketa").value=etiketa;
+			}
 		}
-	}
-	XMLHttpRequestObject.open("GET","./php/erakutsiArgazkia.php?albumIzenburua="+albumizenburu+"&etiketa="+etiketa, true);
-	XMLHttpRequestObject.send();
+		XMLHttpRequestObject.open("GET","./php/erakutsiArgazkia.php?albumIzenburua="+albumizenburu+"&etiketa="+etiketa, true);
+		XMLHttpRequestObject.send();
 	}else{
 		document.getElementById("irudiaIkusi").innerHTML="";
 		document.getElementById("etiketa").value="";
@@ -61,13 +58,11 @@ function argazkiaBistaratu(albumizenburu,etiketa){
 		document.getElementById('PRI').checked=false;
 		document.getElementById('MUG').checked=false;	
 	}
-
-	
 }
+
 function erakutsiNireArgazkiak(egoera){
 	XMLHttpRequestObject.onreadystatechange = function(){
 		document.getElementById("carousel").innerHTML="";
-		//alert(XMLHttpRequestObject.readyState +"/"+albumizenburu);
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
 			document.getElementById("carousel").innerHTML=XMLHttpRequestObject.responseText;
 		}
@@ -81,7 +76,6 @@ function bisitaGehitu(img){
 
 	XMLHttpRequestObject.onreadystatechange = function(){
 		if ((XMLHttpRequestObject.readyState==4)&&(XMLHttpRequestObject.status==200 )){
-
 		}
 	}
 	XMLHttpRequestObject.open("GET","./php/bisitaGehitu.php?INFO="+info, true);
