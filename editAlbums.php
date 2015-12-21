@@ -36,13 +36,17 @@
 						</li>
 						<li>
 							<label>DESKRIBAPENA: <span class="required">*</span></label>
-							<textarea id="deskribapena" name="deskribapena" style='width:100%;height:100px;resize:none' required></textarea>
+							<textarea id="deskribapena" name="deskribapena" style='width:100%;height:100px;resize:none'></textarea>
 						</li>
 						<li>
 							<input type="submit" value="EDITATU" />
 							<?php
 								if ($_SERVER["REQUEST_METHOD"] == "POST"){
-									include 'php/erab/albumAldatu.php';
+									if(strcmp($_POST['combobox_album'],'-')==0){
+										echo "<p id='mezua' style='color:red'>Album bat aukeratu</p>";
+									}else{
+										include 'php/erab/albumAldatu.php';
+									}
 								}
 							?>
 						</li>

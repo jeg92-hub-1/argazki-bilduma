@@ -46,7 +46,7 @@
 						</li>
 						<li>
 							<label>ETIKETA: <span class="required">*</span></label>
-							<input type="text" name="ETIKETA" id="etiketa" class="field-long" required/></li>
+							<input type="text" name="ETIKETA" id="etiketa" class="field-long"/></li>
 							</select>
 						</li>
 						<li>
@@ -59,7 +59,11 @@
 							<input type="submit" value="EDITATU IRUDIA" />
 							<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								include 'php/erab/irudiaAldatu.php';
+								if(!isset( $_POST['combobox_argazkiak']) || strcmp($_POST['combobox_album'],'-')==0 || !isset( $_POST['EGOERA']) ){
+									echo "<p id='mezua' style='color:red'>Aukeratu Album bat</p>";
+								}else{
+									include 'php/erab/irudiaAldatu.php';
+								}
 							}
 							?>
 						</li>
