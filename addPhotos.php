@@ -49,7 +49,7 @@
 						</li>
 						<li>
 							<label>ETIKETA: <span class="required">*</span></label>
-							<input type="text" name="ETIKETA" id="etiketa" class="field-long" /></li>
+							<input type="text" name="ETIKETA" id="etiketa" class="field-long" required /></li>
 						<li>
 							<label>IRUDIA: <span class="required">*</span></label>
 							<input type="file" name="irudiaIgo" onchange="showMyImage(this)" class="field-long" required/>
@@ -59,11 +59,15 @@
 							<input type="submit" value="GEHITU IRUDIA" />
 							<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								$nick = $_SESSION['login_nick'];
-								$etiketa = $_POST['ETIKETA'];
 								$albumIzenburua = $_POST['combobox_album'];
-								$egoera=$_POST['combobox_egoera'];
-								include 'php/erab/irudiaGehitu.php';
+								if(strcmp($albumIzenburua,'-')==0){
+									echo "<p id='mezua' style='color:red'>Aukeratu album bat!</p>";
+								}else{
+									$nick = $_SESSION['login_nick'];
+									$etiketa = $_POST['ETIKETA'];
+									$egoera=$_POST['combobox_egoera'];
+									include 'php/erab/irudiaGehitu.php';
+								}
 							}
 							?>
 						</li>

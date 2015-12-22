@@ -48,13 +48,22 @@
 							<input type="submit" value="EZABATU IRUDIA" />
 							<?php
 							if ($_SERVER["REQUEST_METHOD"] == "POST"){
-								include 'php/erab/irudiaKendu.php';
+								$izenburua=$_POST['combobox_album'];
+								if(strcmp($izenburua,'-')==0){
+									echo "<p id='mezua' style='color:red'>Albuma aukeratu</p>";
+								}else{
+									include 'php/erab/irudiaKendu.php';
+								}
 							}
 							?>
 						</li>
 					</ul>
 					<div id="irudiaIkusi">
 					</div>
+					<script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+					<script type='text/javascript'>
+						$(document).ready( function() {$('#mezua').delay(1000).fadeOut();});
+					</script>	
 	</section>
 	
 </div>
