@@ -5,7 +5,7 @@ require_once('lib/class.wsdlcache.php');
 $email = $_GET['EMAIL'];
 
 //Web zerbitzariaren URL-a
-$wsdl = "http://localhost:8080/argazkiBilduma/service/myserver.php";
+$wsdl = "http://localhost:8080/argazki-bilduma/service/myserver.php";
 //Erabiltzaile objektua sortzen
 $client = new nusoap_client($wsdl, false);
 
