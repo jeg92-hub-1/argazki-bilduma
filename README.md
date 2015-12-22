@@ -4,6 +4,8 @@ Helburua lainoan mantengarri izango den argazki-albuma aplikazio baten garapena 
 
 # OHARRAK:
 
+Dokumentazioa "file" karpetan
+
 Datu base bat sortu argazkibilduma izenekoa
 
 Datu basean beharrezko taulak sortzeko "file/argazkialbuma.sql"-ko CREATE TABLE sententziak erabili.
